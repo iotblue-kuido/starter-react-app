@@ -18,6 +18,8 @@ import './App.css'
 import AuthShield from './components/auth/AuthShield';
 import NavBar from './components/NavBar';
 import MainLayout from './components/MainLayout';
+import {ThemeProvider, useTheme} from "@mui/material";
+import LandingPage from "./views/LandingPage";
 
 function App() {
   const userPreferedLanguage = localStorage.getItem(user_prefered_language);
@@ -38,25 +40,28 @@ function App() {
     },
   });
   return (
-    <I18nextProvider i18n={i18n}>
-      <Suspense fallback={'..loading'}>
-        <StyledEngineProvider injectFirst>
-          <AppsTheme>
-            <AuthShield>
-              <StrictMode>
-                <BrowserRouter>
-                  <ErrorBoundary>
-                    <MainLayout>
-                      <Routes />
-                    </MainLayout>
-                  </ErrorBoundary>
-                </BrowserRouter>
-              </StrictMode>
-            </AuthShield>
-          </AppsTheme>
-        </StyledEngineProvider>
-      </Suspense>
-    </I18nextProvider>
+    // <I18nextProvider i18n={i18n}>
+    //   <Suspense fallback={'..loading'}>
+    //     <StyledEngineProvider injectFirst>
+    //       <AppsTheme>
+    //         <AuthShield>
+    //           <StrictMode>
+    //             <BrowserRouter>
+    //               <ErrorBoundary>
+    //                 <MainLayout>
+    //                   <Routes />
+    //                 </MainLayout>
+    //               </ErrorBoundary>
+    //             </BrowserRouter>
+    //           </StrictMode>
+    //         </AuthShield>
+    //       </AppsTheme>
+    //     </StyledEngineProvider>
+    //   </Suspense>
+    // </I18nextProvider>
+      <ThemeProvider theme={useTheme()}>
+        <LandingPage/>
+      </ThemeProvider>
   )
 }
 

@@ -71,7 +71,6 @@ function ResponsiveAppBar() {
 
   function handleLanguageChange(lang: string) {
     colorMode.changeLanguage(lang);
-    localStorage.setItem(user_prefered_language, lang);
     handleCloseLangMenu();
   }
 

@@ -10,9 +10,9 @@ const routes: RouteObject[] = [
   {
     path: Paths.HOME,
     element: (
-      // < PrivateComponent >
+      < PrivateComponent >
       <LandingPage />
-      // </PrivateComponent >
+      </PrivateComponent >
     ),
   },
   {
