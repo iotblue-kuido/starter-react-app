@@ -28,7 +28,7 @@
     "react-hook-form": "^7.45.1",
     "react-i18next": "^13.0.2",
     "react-router-dom": "^6.14.1",
-    "ui-widgets": "^0.0.49"
+    "ui-widgets": "^0.0.61"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",

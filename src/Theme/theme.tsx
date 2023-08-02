@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { user_prefered_theme_mode } from '../shared/constants';
 import { UserPreferedContext } from '../shared/Contexts/UserPreferedContext';
 import { darkTheme } from './darkTheme';
+import { KuidoTheme } from 'ui-widgets';
 
 interface Props {
 	children: React.ReactNode;
@@ -38,9 +39,12 @@ function AppsTheme({ children }: Props) {
 
 	return (
 		<UserPreferedContext.Provider value={{ ...colorMode, ...selectedLanguage }}>
-			<ThemeProvider theme={mode === 'dark' ? { ...darkTheme, direction: i18n.dir } : { ...lightTheme, direction: i18n.dir }}>
-				<CssBaseline /> {children}
-			</ThemeProvider>
+			<KuidoTheme theme={mode} direction={i18n.dir()}>
+				<ThemeProvider theme={mode === 'dark' ? { ...darkTheme, direction: i18n.dir() } : { ...lightTheme, direction: i18n.dir() }}>
+					{/* <CssBaseline />  */}
+					{children}
+				</ThemeProvider>
+			</KuidoTheme>
 		</UserPreferedContext.Provider>
 	);
 }

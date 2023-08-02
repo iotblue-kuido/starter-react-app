@@ -1,39 +1,23 @@
 import { init } from 'kuido-sdk'
 import { Options } from 'kuido-sdk/lib/adapters/auth';
 import {AccessTimeFilled} from '@mui/icons-material';
-import {
-  BasicList,
-  BasicListProps,
-  NavListProps,
-  BasicListItem,
-  BasicListWithNavLink,
-  BasicCard,
-  BasicCardProps,
-    KuidoTheme
-} from "ui-widgets"
+import {ConnectivityCard} from "../useCases"
+import {KuidoTheme} from 'ui-widgets'
 
-type Props = {}
+import { useTheme } from '@mui/material/styles';
+import { lightTheme } from '../../Theme/lightTheme';
 
-const LandingPage = (props: Props) => {
+import TestCard from './testCard';
 
-  const basicCardConfig: BasicCardProps = {
-    title: 'Devices',
-    onInitGet: (): Promise<number> => {
-    return new Promise((resolve, reject) => resolve(4
-    ));
-  },
-    minValue: 5,
-    maxValue: 10,
-  }
+const LandingPage = () => {
+
+  const theme = useTheme();
+
+  console.log("theme 0", theme.spacing(4))
+
 
   return (
-      <KuidoTheme>
-        {/*<BasicCard {...basicCardConfigs} />*/}
-        {/*<Helloworld text={'hshs'}/>*/}
-        {/*<BasicList {...basicCardConfig} />*/}
-        <BasicCard {...basicCardConfig} />
-        {/*<BasicListWithNavLink {...navListConfig} />*/}
-      </KuidoTheme>
+        <ConnectivityCard />
   )
 }
 
