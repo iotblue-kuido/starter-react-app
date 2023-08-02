@@ -19,6 +19,7 @@
     "@novu/notification-center": "^0.16.3",
     "@react-keycloak/web": "^3.4.0",
     "axios": "^1.4.0",
+    "cervello.js": "^0.13.7",
     "i18next": "^23.2.11",
     "keycloak-js": "^22.0.0",
     "kuido-sdk": "^0.0.3",

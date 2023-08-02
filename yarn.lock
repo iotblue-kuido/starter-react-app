@@ -1461,6 +1461,15 @@ caniuse-lite@^1.0.30001517:
   resolved "https://repo.iotblue.io/repository/npm-group/caniuse-lite/-/caniuse-lite-1.0.30001518.tgz#b3ca93904cb4699c01218246c4d77a71dbe97150"
   integrity sha512-rup09/e3I0BKjncL+FesTayKtPrdwKhUufQFd3riFw1hHg8JmIFoInYfB102cFcY/pPgGmdyl/iy+jgiDi2vdA==
 
+cervello.js@^0.13.7:
+  version "0.13.7"
+  resolved "https://repo.iotblue.io/repository/npm-group/cervello.js/-/cervello.js-0.13.7.tgz#6ed66e29e2954b4cf1aabde2ed326f582661af9b"
+  integrity sha512-mJMT1qkRUU42YZE3RyaTeayFciG9wzATWp2sgP57pXXnpE4oF4BLqHD/1aD90SE2vUZDDbd40+6Z0n0fKGu+DQ==
+  dependencies:
+    axios "^0.21.4"
+    qs "^6.9.1"
+    socket.io-client "^4.2.0"
+
 chai@^4.3.7:
   version "4.3.7"
   resolved "https://repo.iotblue.io/repository/npm-group/chai/-/chai-4.3.7.tgz#ec63f6df01829088e8bf55fca839bcd464a8ec51"
