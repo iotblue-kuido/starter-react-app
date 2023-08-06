@@ -9,13 +9,10 @@ import {
   Options,
 } from 'cervello.js/lib/interfaces/Common';
 import {Device, DeviceData, DeviceLog} from 'cervello.js/lib/modules/devices';
-import useLightNotifications from 'pages/LightingSystem/useLightNotification';
 import {Asset} from 'cervello.js/lib/modules/assets';
 
 export interface DevicesModule {
   getDevice(deviceId: string): Promise<Device>;
-  putOnMaintenance(devicesIds: string[]): Promise<FeedBack>;
-  putOffMaintenance(devicesIds: string[]): Promise<FeedBack>;
   getTagDevicesCount(
     tag: string,
     options?: Options,
@@ -42,7 +39,6 @@ export default function useDevices(): DevicesModule {
   const [isInitialized, setIsInitialized] = useState<boolean>(
     Cervello.isInitialized,
   );
-  const {pushNotification} = useLightNotifications();
 
   Cervello.observeOnInit(() => {
     setIsInitialized(true);
@@ -125,7 +121,7 @@ export default function useDevices(): DevicesModule {
   );
 
   const listenToDevicesStatus = useCallback(
-    (callback) => {
+    (callback: (arg0: DeviceLog) => void) => {
       if (!isInitialized) {
         return;
       }
@@ -148,7 +144,7 @@ export default function useDevices(): DevicesModule {
   }, []);
 
   const listenToTagConnectivity = useCallback(
-    (tag, callback) => {
+    (tag: any, callback: (arg0: DeviceLog) => void) => {
       if (!isInitialized) {
         return;
       }
@@ -164,7 +160,7 @@ export default function useDevices(): DevicesModule {
     [isInitialized],
   );
 
-  const unListenToTagConnectivity = useCallback((tag) => {
+  const unListenToTagConnectivity = useCallback((tag: any) => {
     if (cervelloInstance)
       return cervelloInstance.devices.removeConnectivityListener(
         Cervello.params.organizationId || '',
@@ -281,90 +277,6 @@ export default function useDevices(): DevicesModule {
     [isInitialized],
   );
 
-  const putOnMaintenance = useCallback(
-    (devicesIds: string[]) => {
-      if (!isInitialized) {
-        return new Promise<FeedBack>((resolve, reject) => {
-          reject(UN_INITIALIZED_ERROR);
-        });
-      }
-
-      return cervelloInstance.devices
-        .putOnMaintenance({
-          params: {
-            organizationId: Cervello.params.organizationId || '',
-          },
-          data: devicesIds,
-        })
-        .then((result) => {
-          pushNotification(
-            `تم وضع ${
-              devicesIds.length > 1 ? 'الأجهزة' : 'الجهاز'
-            }  في وضع الصيانة بنجاح `,
-            {
-              type: 'success',
-            },
-          );
-          return result;
-        })
-        .catch((e) => {
-          pushNotification(
-            `حدث خطأ فى وضع ${
-              devicesIds.length > 1 ? 'الأجهزة' : 'الجهاز'
-            }  في وضع الصيانة `,
-            {
-              type: 'error',
-            },
-          );
-
-          throw e;
-        });
-    },
-    [isInitialized, pushNotification],
-  );
-
-  const putOffMaintenance = useCallback(
-    (devicesIds: string[]) => {
-      if (!isInitialized) {
-        return new Promise<FeedBack>((resolve, reject) => {
-          reject(UN_INITIALIZED_ERROR);
-        });
-      }
-
-      return cervelloInstance.devices
-        .putOffMaintenance({
-          params: {
-            organizationId: Cervello.params.organizationId || '',
-          },
-          data: devicesIds,
-        })
-        .then((result) => {
-          pushNotification(
-            `تم إزالة ${
-              devicesIds.length > 1 ? 'الأجهزة' : 'الجهاز'
-            }  من وضع الصيانة بنجاح`,
-            {
-              type: 'success',
-            },
-          );
-          return result;
-        })
-        .catch((e) => {
-          pushNotification(
-            `حدث خطأ فى  ${
-              devicesIds.length > 1 ? 'الأجهزة' : 'الجهاز'
-            }  من وضع الصيانة بنجاح`,
-            {
-              type: 'error',
-            },
-          );
-
-          throw e;
-        });
-    },
-    [isInitialized, pushNotification],
-  );
-
   return {
     getTagDevicesCount,
     getTagDevices,
@@ -373,8 +285,6 @@ export default function useDevices(): DevicesModule {
     listDevices,
     getDevice,
     getAllAssetDevices,
-    putOnMaintenance,
-    putOffMaintenance,
     createDevice,
     updateDevice,
     deleteDevice,

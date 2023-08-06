@@ -15,7 +15,7 @@ export default function useAttributes(): AttributesModule {
   });
 
   const getTagAttributes = useCallback(
-    (tag, options) => {
+    (tag: any, options: Options) => {
       if (!isInitialized) {
         return new Promise<Reading[]>((resolve, reject) => {
           reject(UN_INITIALIZED_ERROR);
@@ -31,7 +31,7 @@ export default function useAttributes(): AttributesModule {
           ...options,
         })
         .then(result => {
-          const {data} = result as ListResponse<Reading[]>;
+          const {data} = result ;
 
           return data;
         });
@@ -57,7 +57,7 @@ export default function useAttributes(): AttributesModule {
           ...options,
         })
         .then(result => {
-          const {data} = result as ListResponse<Reading[]>;
+          const {data} = result ;
 
           return data;
         });

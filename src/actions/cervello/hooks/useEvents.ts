@@ -14,7 +14,7 @@ export interface EventsModule {
   getOrganizationEventsStatistics(
     options: Options & {group: string},
   ): Promise<ListResponse<EventStatistcs[]>>;
-  listenToOrganizationEvents(callback: (alarm: EventData) => void): void;
+  listenToOrganizationEvents(callback: (alarm: EventData| EventData[]) => void): void;
   unListenToOrganizationEvents(): void;
   getTagEvents(
     tag: string,
@@ -52,7 +52,7 @@ export interface EventsModule {
   ): Promise<ListResponse<EventStatistcs[]>>;
   listenToAssetEvents(
     assetId: string,
-    callback: (alarm: EventData) => void,
+    callback: (alarm: EventData | EventData[]) => void,
   ): void;
   unListenToAssetEvents(assetId: string): void;
 }
@@ -67,7 +67,7 @@ export default function useEvents(): EventsModule {
   });
 
   const getOrganizationEvents = useCallback(
-    (options) => {
+    (options: any) => {
       if (!isInitialized) {
         return new Promise<ListResponse<EventData[]>>((resolve, reject) => {
           reject(UN_INITIALIZED_ERROR);
@@ -76,7 +76,7 @@ export default function useEvents(): EventsModule {
 
       return Cervello.organization.events
         .list(options || {})
-        .then((result) => result as ListResponse<EventData[]>);
+        .then((result) => result );
     },
     [isInitialized],
   );
@@ -94,18 +94,19 @@ export default function useEvents(): EventsModule {
 
       return Cervello.organization.events
         .statistics(options || {})
-        .then((result) => result as ListResponse<EventStatistcs[]>);
+        .then((result) => result );
     },
     [isInitialized],
   );
   const listenToOrganizationEvents = useCallback(
-    (callback) => {
+    (callback: (alarm: EventData | EventData[]) => void) => {
       if (!isInitialized) {
         return;
       }
 
       return Cervello.organization.events.listen((event) => {
-        return callback(event);
+        callback(event);
+        return event;
       });
     },
     [isInitialized],
@@ -230,7 +231,7 @@ export default function useEvents(): EventsModule {
         })
         .list(options || {})
         .then((result) => {
-          return result as ListResponse<EventData[]>;
+          return result ;
         });
     },
     [isInitialized],
@@ -259,13 +260,13 @@ export default function useEvents(): EventsModule {
         })
         .statistics(options)
         .then((result) => {
-          return result as ListResponse<EventStatistcs[]>;
+          return result ;
         });
     },
     [isInitialized],
   );
   const listenToTagEvents = useCallback(
-    (tag, callback) => {
+    (tag: any, callback: (arg0: EventData | EventData[]) => void) => {
       if (!isInitialized) {
         return;
       }
@@ -288,7 +289,7 @@ export default function useEvents(): EventsModule {
     [isInitialized],
   );
   const unListenToTagEvents = useCallback(
-    (tag) => {
+    (tag: any) => {
       if (!isInitialized) {
         return;
       }
@@ -306,7 +307,7 @@ export default function useEvents(): EventsModule {
   );
 
   const getAssetEvents = useCallback(
-    (id: string, options) => {
+    (id: string, options: any) => {
       if (!isInitialized) {
         return new Promise<ListResponse<EventData[]>>((resolve, reject) => {
           reject(UN_INITIALIZED_ERROR);
@@ -323,7 +324,7 @@ export default function useEvents(): EventsModule {
         })
         .then((asset) => {
           return asset.events.list(options || {}).then((result) => {
-            return result as ListResponse<EventData[]>;
+            return result ;
           });
         });
     },
@@ -355,17 +356,16 @@ export default function useEvents(): EventsModule {
         .then((asset) => {
           return asset.events
             .statistics(options || {})
-            .then((result) => result as ListResponse<EventStatistcs[]>);
+            .then((result) => result );
         });
     },
     [isInitialized],
   );
   const listenToAssetEvents = useCallback(
-    (assetId, callback) => {
+    (assetId: any, callback: (alarm: EventData | EventData[]) => void) => {
       if (!isInitialized) {
         return;
       }
-
       return cervelloInstance.assets
         .get({
           params: {
@@ -375,15 +375,16 @@ export default function useEvents(): EventsModule {
           },
         })
         .then((asset) => {
-          return asset.events.listen((event) => {
-            return callback(event);
+          asset.events.listen((event)=>{
+            callback(event);
+            return event
           });
         });
     },
     [isInitialized],
   );
   const unListenToAssetEvents = useCallback(
-    (assetId) => {
+    (assetId: any) => {
       if (!isInitialized) {
         return;
       }

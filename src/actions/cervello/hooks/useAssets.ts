@@ -37,7 +37,7 @@ export default function useAssets(): AssetsModule {
           options,
         })
         .then((result) => {
-          const {data} = result as ListResponse<AssetData[]>;
+          const {data} = result ;
 
           return data;
         });
@@ -62,7 +62,7 @@ export default function useAssets(): AssetsModule {
           },
         })
         .then((result) => {
-          return result as Asset;
+          return result ;
         });
     },
     [isInitialized],
@@ -85,7 +85,7 @@ export default function useAssets(): AssetsModule {
           options,
         })
         .then((result) => {
-          return result as ListResponse<AssetData[]>;
+          return result ;
         });
     },
     [isInitialized],

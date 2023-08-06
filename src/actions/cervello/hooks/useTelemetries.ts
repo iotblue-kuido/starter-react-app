@@ -7,7 +7,10 @@ import {
   Reading as Telemetry,
 } from 'cervello.js/lib/interfaces/Common';
 import {Device} from 'cervello.js/lib/modules/devices';
-import {TelemetriesGroup} from 'cervello.js/lib/modules/telemetries';
+import {
+  ListOptions,
+  TelemetriesGroup,
+} from 'cervello.js/lib/modules/telemetries';
 import {Asset} from 'cervello.js/lib/modules/assets';
 
 export interface TelemetriesModule {
@@ -17,15 +20,11 @@ export interface TelemetriesModule {
   ): Promise<ListResponse<Telemetry[]>>;
   listenToTagTelemetries(
     tag: string,
-    callback: (data: Telemetry[]) => void,
+    callback: (data: Telemetry | Telemetry[]) => void,
   ): void;
   unListenToTagTelemetries(tag: string): void;
   getDeviceTelemetries(
     deviceId: string,
-    options?: Options,
-  ): Promise<ListResponse<Telemetry[]>>;
-  getAssetTelemteries(
-    assetId: string,
     options?: Options,
   ): Promise<ListResponse<Telemetry[]>>;
   getDeviceTelemetriesGroup(
@@ -34,12 +33,16 @@ export interface TelemetriesModule {
   ): Promise<ListResponse<TelemetriesGroup[]>>;
   listenToDeviceTelemetries(
     deviceId: string,
-    callback: (data: Telemetry[]) => void,
+    callback: (data: Telemetry | Telemetry[]) => void,
   ): void;
   unListenToDeviceTelemetries(deviceId: string): void;
+  getAssetTelemteries(
+    assetId: string,
+    options?: Options,
+  ): Promise<ListResponse<Telemetry[]>>;
   listenToAssetTelemetries(
     deviceId: string,
-    callback: (data: Telemetry[]) => void,
+    callback: (data: Telemetry | Telemetry[]) => void,
   ): void;
   unListenToAssetTelemetries(deviceId: string): void;
 }
@@ -53,7 +56,7 @@ export default function useTelemetries(): TelemetriesModule {
   });
 
   const getTagTelemetries = useCallback(
-    (tag, options) => {
+    (tag: string, options: ListOptions) => {
       if (!isInitialized) {
         return new Promise<ListResponse<Telemetry[]>>((resolve, reject) => {
           reject(UN_INITIALIZED_ERROR);
@@ -66,16 +69,15 @@ export default function useTelemetries(): TelemetriesModule {
         })
         .list({
           pageSize: 5000,
-          aggregation: 'last',
           ...options,
         })
-        .then((result) => result as ListResponse<Telemetry[]>);
+        .then((result) => result );
     },
     [isInitialized],
   );
 
   const listenToTagTelemetries = useCallback(
-    (tag, callback) => {
+    (tag: string, callback: (data: Telemetry | Telemetry[]) => void) => {
       if (!isInitialized) {
         return;
       }
@@ -84,13 +86,16 @@ export default function useTelemetries(): TelemetriesModule {
         .telemetries({
           params: {organizationId: Cervello.params.organizationId || '', tag},
         })
-        .listen(callback);
+        .listen((data) => {
+          callback(data);
+          return {};
+        });
     },
     [isInitialized],
   );
 
   const unListenToTagTelemetries = useCallback(
-    (tag) => {
+    (tag: string) => {
       if (!isInitialized) {
         return;
       }
@@ -105,7 +110,7 @@ export default function useTelemetries(): TelemetriesModule {
   );
 
   const getDeviceTelemetries = useCallback(
-    (deviceId, options) => {
+    (deviceId: string, options: ListOptions) => {
       if (!isInitialized) {
         return new Promise<ListResponse<Telemetry[]>>((resolve, reject) => {
           reject(UN_INITIALIZED_ERROR);
@@ -114,7 +119,7 @@ export default function useTelemetries(): TelemetriesModule {
 
       return new Device({
         id: deviceId,
-        organizationId: process.env.REACT_APP_ORGANIZATION_ID!,
+        organizationId: import.meta.env.VITE_ORGANIZATION_ID,
         name: '',
         deviceType: 'STANDALONE',
         connectivityMedia: 'OTHER',
@@ -125,34 +130,9 @@ export default function useTelemetries(): TelemetriesModule {
       }).telemetries
         .list({
           pageSize: 5000,
-          aggregation: 'last',
           ...options,
         })
-        .then((result) => result as ListResponse<Telemetry[]>);
-    },
-    [isInitialized],
-  );
-  const getAssetTelemteries = useCallback(
-    (assetId, options) => {
-      if (!isInitialized) {
-        return new Promise<ListResponse<Telemetry[]>>((resolve, reject) => {
-          reject(UN_INITIALIZED_ERROR);
-        });
-      }
-
-      return new Asset({
-        id: assetId,
-        organizationId: process.env.REACT_APP_ORGANIZATION_ID!,
-        applicationId: process.env.REACT_APP_APPLICATION_ID!,
-        name: '',
-        customFields: null,
-      }).telemetries
-        .list({
-          pageSize: 5000,
-          aggregation: 'last',
-          ...options,
-        })
-        .then((result) => result as ListResponse<Telemetry[]>);
+        .then((result) => result );
     },
     [isInitialized],
   );
@@ -169,7 +149,7 @@ export default function useTelemetries(): TelemetriesModule {
 
       return new Device({
         id: deviceId,
-        organizationId: process.env.REACT_APP_ORGANIZATION_ID!,
+        organizationId: import.meta.env.VITE_ORGANIZATION_ID,
         name: '',
         deviceType: 'STANDALONE',
         connectivityMedia: 'OTHER',
@@ -179,20 +159,20 @@ export default function useTelemetries(): TelemetriesModule {
         lastConnectionTime: '',
       }).telemetries
         .group(options)
-        .then((result) => result as ListResponse<TelemetriesGroup[]>);
+        .then((result) => result );
     },
     [isInitialized],
   );
 
   const listenToDeviceTelemetries = useCallback(
-    (deviceId, callback) => {
+    (deviceId: string, callback: (data: Telemetry | Telemetry[]) => void) => {
       if (!isInitialized) {
         return;
       }
 
       new Device({
         id: deviceId,
-        organizationId: process.env.REACT_APP_ORGANIZATION_ID!,
+        organizationId: import.meta.env.VITE_ORGANIZATION_ID,
         name: '',
         deviceType: 'STANDALONE',
         connectivityMedia: 'OTHER',
@@ -200,21 +180,69 @@ export default function useTelemetries(): TelemetriesModule {
         customFields: null,
         lastConnectionStatus: false,
         lastConnectionTime: '',
-      }).telemetries.listen(callback);
+      }).telemetries.listen((data) => {
+        callback(data);
+        return {};
+      });
+    },
+    [isInitialized],
+  );
+
+  const unListenToDeviceTelemetries = useCallback(
+    (deviceId: string) => {
+      if (!isInitialized) {
+        return;
+      }
+
+      return new Device({
+        id: deviceId,
+        organizationId: import.meta.env.VITE_ORGANIZATION_ID,
+        name: '',
+        deviceType: 'STANDALONE',
+        connectivityMedia: 'OTHER',
+        communicationProtocol: 'DEFAULT',
+        customFields: null,
+        lastConnectionStatus: false,
+        lastConnectionTime: '',
+      }).telemetries.removeListener();
+    },
+    [isInitialized],
+  );
+
+  const getAssetTelemteries = useCallback(
+    (assetId: string, options: ListOptions) => {
+      if (!isInitialized) {
+        return new Promise<ListResponse<Telemetry[]>>((resolve, reject) => {
+          reject(UN_INITIALIZED_ERROR);
+        });
+      }
+
+      return new Asset({
+        id: assetId,
+        organizationId: import.meta.env.VITE_ORGANIZATION_ID,
+        applicationId: import.meta.env.VITE_APPLICATION_ID,
+        name: '',
+        customFields: null,
+      }).telemetries
+        .list({
+          pageSize: 5000,
+          ...options,
+        })
+        .then((result) => result );
     },
     [isInitialized],
   );
 
   const unListenToAssetTelemetries = useCallback(
-    (assetId) => {
+    (assetId: string) => {
       if (!isInitialized) {
         return;
       }
 
       return new Asset({
         id: assetId,
-        applicationId: process.env.REACT_APP_APPLICATION_ID!,
-        organizationId: process.env.REACT_APP_ORGANIZATION_ID!,
+        organizationId: import.meta.env.VITE_ORGANIZATION_ID,
+        applicationId: import.meta.env.VITE_APPLICATION_ID,
         name: '',
         customFields: null,
       }).telemetries.removeListener();
@@ -222,39 +250,21 @@ export default function useTelemetries(): TelemetriesModule {
     [isInitialized],
   );
   const listenToAssetTelemetries = useCallback(
-    (assetId, callback) => {
+    (assetId: string, callback: (data: Telemetry | Telemetry[]) => void) => {
       if (!isInitialized) {
         return;
       }
 
       new Asset({
         id: assetId,
-        applicationId: process.env.REACT_APP_APPLICATION_ID!,
-        organizationId: process.env.REACT_APP_ORGANIZATION_ID!,
+        organizationId: import.meta.env.VITE_ORGANIZATION_ID,
+        applicationId: import.meta.env.VITE_APPLICATION_ID,
         name: '',
         customFields: null,
-      }).telemetries.listen(callback);
-    },
-    [isInitialized],
-  );
-
-  const unListenToDeviceTelemetries = useCallback(
-    (deviceId) => {
-      if (!isInitialized) {
-        return;
-      }
-
-      return new Device({
-        id: deviceId,
-        organizationId: process.env.REACT_APP_ORGANIZATION_ID!,
-        name: '',
-        deviceType: 'STANDALONE',
-        connectivityMedia: 'OTHER',
-        communicationProtocol: 'DEFAULT',
-        customFields: null,
-        lastConnectionStatus: false,
-        lastConnectionTime: '',
-      }).telemetries.removeListener();
+      }).telemetries.listen((data) => {
+        callback(data);
+        return {};
+      });
     },
     [isInitialized],
   );
@@ -267,8 +277,8 @@ export default function useTelemetries(): TelemetriesModule {
     getDeviceTelemetriesGroup,
     listenToDeviceTelemetries,
     unListenToDeviceTelemetries,
+    getAssetTelemteries,
     listenToAssetTelemetries,
     unListenToAssetTelemetries,
-    getAssetTelemteries,
   };
 }

@@ -1,10 +1,11 @@
 import {useCallback, useState} from 'react';
 import Cervello from '../index';
 import {
-  CommandFeedBack,
   queryResourceType,
 } from 'cervello.js/lib/modules/organizations';
-import {UN_INITIALIZED_ERROR} from 'shared/helpers/common';
+import {UN_INITIALIZED_ERROR} from '../../../shared/helpers/common';
+import {Options} from 'cervello.js/lib/interfaces/Common';
+import { CommandFeedBack } from 'cervello.js/lib/modules/commandTemplates';
 
 export interface OrganizationModule {
   listenToTopic<T>(topic: string, callback: (feedback: T) => void): void;
@@ -14,6 +15,7 @@ export interface OrganizationModule {
   ): void;
   unlistenToTemplate(templateId: string): void;
   query(resouce: queryResourceType, query: any): Promise<any>;
+  getAuditLogs(options?: Options): Promise<any>;
 }
 
 export default function useOrganization(): OrganizationModule {
@@ -35,7 +37,10 @@ export default function useOrganization(): OrganizationModule {
   );
 
   const listenToTemplate = useCallback(
-    (templateId, callback) => {
+    (
+      templateId: string,
+      callback: (templateFeedback: CommandFeedBack) => void,
+    ) => {
       if (!isInitialized) {
         return;
       }
@@ -46,7 +51,7 @@ export default function useOrganization(): OrganizationModule {
   );
 
   const unlistenToTemplate = useCallback(
-    (templateId) => {
+    (templateId: string) => {
       if (!isInitialized) {
         return;
       }
@@ -67,6 +72,23 @@ export default function useOrganization(): OrganizationModule {
     },
     [isInitialized],
   );
+  const getAuditLogs = useCallback(
+    (options: Options) => {
+      if (!isInitialized) {
+        return new Promise<any>((resolve, reject) => {
+          reject(UN_INITIALIZED_ERROR);
+        });
+      }
+      return Cervello.organization.logs(options);
+    },
+    [isInitialized],
+  );
 
-  return {listenToTopic, listenToTemplate, unlistenToTemplate, query};
+  return {
+    listenToTopic,
+    listenToTemplate,
+    unlistenToTemplate,
+    query,
+    getAuditLogs,
+  };
 }

@@ -2,7 +2,7 @@ import {useCallback, useState} from 'react';
 import Cervello, {cervelloInstance} from '../index';
 import {ListResponse, Options} from 'cervello.js/lib/interfaces/Common';
 import {AlarmData, AlarmStatistcs} from 'cervello.js/lib/modules/alarms';
-import {UN_INITIALIZED_ERROR} from 'shared/helpers/common';
+import {UN_INITIALIZED_ERROR} from '../../../shared/helpers/common';
 import {Device} from 'cervello.js/lib/modules/devices';
 import {Asset} from 'cervello.js/lib/modules/assets';
 
@@ -65,7 +65,7 @@ export default function useAlarms(): AlarmsModule {
   });
 
   const getOrganizationAlarms = useCallback(
-    (options) => {
+    (options: any) => {
       if (!isInitialized) {
         return new Promise<ListResponse<AlarmData[]>>((resolve, reject) => {
           reject(UN_INITIALIZED_ERROR);
@@ -73,7 +73,7 @@ export default function useAlarms(): AlarmsModule {
       }
       return Cervello.organization.alarms
         .list(options || {})
-        .then((result) => result as ListResponse<AlarmData[]>);
+        .then((result) => result );
     },
     [isInitialized],
   );
@@ -93,12 +93,12 @@ export default function useAlarms(): AlarmsModule {
 
       return Cervello.organization.alarms
         .statistics(options || {})
-        .then((result) => result as ListResponse<AlarmStatistcs[]>);
+        .then((result) => result );
     },
     [isInitialized],
   );
   const listenToOrganizationAlarms = useCallback(
-    (callback) => {
+    (callback: (arg0: AlarmData) => void) => {
       if (!isInitialized) {
         return;
       }
@@ -118,7 +118,7 @@ export default function useAlarms(): AlarmsModule {
   }, [isInitialized]);
 
   const getDeviceAlarms = useCallback(
-    (deviceId: string, options) => {
+    (deviceId: string, options: any) => {
       if (!isInitialized) {
         return new Promise<ListResponse<AlarmData[]>>((resolve, reject) => {
           reject(UN_INITIALIZED_ERROR);
@@ -127,7 +127,7 @@ export default function useAlarms(): AlarmsModule {
 
       return new Device({
         id: deviceId,
-        organizationId: process.env.REACT_APP_ORGANIZATION_ID!,
+        organizationId: import.meta.env.REACT_APP_ORGANIZATION_ID,
         name: '',
         deviceType: 'STANDALONE',
         connectivityMedia: 'OTHER',
@@ -137,13 +137,13 @@ export default function useAlarms(): AlarmsModule {
         lastConnectionTime: '',
       }).alarms
         .list(options || {})
-        .then((result) => result as ListResponse<AlarmData[]>);
+        .then((result) => result );
     },
     [isInitialized],
   );
 
   const getDeviceAlarmsStatistics = useCallback(
-    (deviceId: string, options) => {
+    (deviceId: string, options: Options & { group: string; }) => {
       if (!isInitialized) {
         return new Promise<ListResponse<AlarmStatistcs[]>>(
           (resolve, reject) => {
@@ -154,7 +154,7 @@ export default function useAlarms(): AlarmsModule {
 
       return new Device({
         id: deviceId,
-        organizationId: process.env.REACT_APP_ORGANIZATION_ID!,
+        organizationId: import.meta.env.VITE_ORGANIZATION_ID,
         name: '',
         deviceType: 'STANDALONE',
         connectivityMedia: 'OTHER',
@@ -164,20 +164,20 @@ export default function useAlarms(): AlarmsModule {
         lastConnectionTime: '',
       }).alarms
         .statistics({pageNumber: 1, pageSize: 10, ...options} || {})
-        .then((result) => result as ListResponse<AlarmStatistcs[]>);
+        .then((result) => result );
     },
     [isInitialized],
   );
 
   const listenToDeviceAlarms = useCallback(
-    (deviceId: string, callback) => {
+    (deviceId: string, callback: (arg0: AlarmData) => void) => {
       if (!isInitialized) {
         return;
       }
 
       return new Device({
         id: deviceId,
-        organizationId: process.env.REACT_APP_ORGANIZATION_ID!,
+        organizationId: import.meta.env.VITE_ORGANIZATION_ID,
         name: '',
         deviceType: 'STANDALONE',
         connectivityMedia: 'OTHER',
@@ -199,7 +199,7 @@ export default function useAlarms(): AlarmsModule {
 
       return new Device({
         id: deviceId,
-        organizationId: process.env.REACT_APP_ORGANIZATION_ID!,
+        organizationId: import.meta.env.VITE_ORGANIZATION_ID,
         name: '',
         deviceType: 'STANDALONE',
         connectivityMedia: 'OTHER',
@@ -229,7 +229,7 @@ export default function useAlarms(): AlarmsModule {
         })
         .list(options || {})
         .then((result) => {
-          return result as ListResponse<AlarmData[]>;
+          return result ;
         });
     },
     [isInitialized],
@@ -258,13 +258,13 @@ export default function useAlarms(): AlarmsModule {
         })
         .statistics(options)
         .then((result) => {
-          return result as ListResponse<AlarmStatistcs[]>;
+          return result ;
         });
     },
     [isInitialized],
   );
   const listenToTagAlarms = useCallback(
-    (tag, callback) => {
+    (tag: any, callback: (arg0: AlarmData) => void) => {
       if (!isInitialized) {
         return;
       }
@@ -286,7 +286,7 @@ export default function useAlarms(): AlarmsModule {
     [isInitialized],
   );
   const unListenToTagAlarms = useCallback(
-    (tag) => {
+    (tag: any) => {
       if (!isInitialized) {
         return;
       }
@@ -304,7 +304,7 @@ export default function useAlarms(): AlarmsModule {
   );
 
   const getAssetAlarms = useCallback(
-    (id: string, options) => {
+    (id: string, options: any) => {
       if (!isInitialized) {
         return new Promise<ListResponse<AlarmData[]>>((resolve, reject) => {
           reject(UN_INITIALIZED_ERROR);
@@ -376,7 +376,7 @@ export default function useAlarms(): AlarmsModule {
     [isInitialized],
   );
   const listenToAssetAlarms = useCallback(
-    (assetId, callback) => {
+    (assetId: any, callback: (arg0: AlarmData) => void) => {
       if (!isInitialized) {
         return;
       }
@@ -398,7 +398,7 @@ export default function useAlarms(): AlarmsModule {
     [isInitialized],
   );
   const unListenToAssetAlarms = useCallback(
-    (assetId) => {
+    (assetId: any) => {
       if (!isInitialized) {
         return;
       }
