@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { ThemeProvider, useTheme } from '@mui/material/styles';
+import { ThemeProvider as MuiThemeProvider, useTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { lightTheme } from './lightTheme';
+// import { lightTheme } from './lightTheme';
 import { useTranslation } from 'react-i18next';
 import { user_prefered_theme_mode } from '../shared/constants';
 import { UserPreferedContext } from '../shared/Contexts/UserPreferedContext';
-import { darkTheme } from './darkTheme';
-import { KuidoTheme } from 'ui-widgets';
+// import { darkTheme } from './darkTheme';
+import { ThemeProvider, darkTheme, lightTheme } from 'ui-widgets';
 
 interface Props {
 	children: React.ReactNode;
@@ -39,12 +39,12 @@ function AppsTheme({ children }: Props) {
 
 	return (
 		<UserPreferedContext.Provider value={{ ...colorMode, ...selectedLanguage }}>
-			<KuidoTheme theme={mode} direction={i18n.dir()}>
-				<ThemeProvider theme={mode === 'dark' ? { ...darkTheme, direction: i18n.dir() } : { ...lightTheme, direction: i18n.dir() }}>
+			<ThemeProvider mode={mode} direction={i18n.dir()}>
+				<MuiThemeProvider theme={mode === 'dark' ? { ...darkTheme, direction: i18n.dir() } : { ...lightTheme, direction: i18n.dir() }}>
 					{/* <CssBaseline />  */}
 					{children}
-				</ThemeProvider>
-			</KuidoTheme>
+				</MuiThemeProvider>
+			</ThemeProvider>
 		</UserPreferedContext.Provider>
 	);
 }
