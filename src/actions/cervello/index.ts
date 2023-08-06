@@ -21,7 +21,7 @@ export default class Cervello {
   static init(config: AuthOptions): void {
     CervelloJS.init(config)
       .then(instance => {
-        cervelloInstance = instance as CervelloJS.Modules;
+        cervelloInstance = instance ;
 
         if (Cervello.params.organizationId) {
           cervelloInstance.organizations
