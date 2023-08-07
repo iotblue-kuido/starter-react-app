@@ -3,9 +3,9 @@ import xorWith from 'lodash.xorwith';
 import isEmpty from 'lodash.isempty';
 import intersection from 'lodash.intersection';
 import {ERROR_CODES, ERROR_MESSAGES} from './errors';
-import {AlarmData} from 'cervello.js/lib/modules/alarms';
-import {Options, operators} from 'cervello.js/lib/interfaces/Common';
+import {Options, operators} from 'kuido-sdk/lib/interfaces/Common';
 import SYSTEMS, {systemsType} from './systems';
+import { AlarmData } from 'kuido-sdk/lib/types';
 
 export const isArrayEqual = (x: any[], y: any[]): boolean =>
   isEmpty(xorWith(x, y, isEqual));
@@ -165,7 +165,7 @@ export const cutLongWords = (text: string, maxLength: number) => {
 
 export const getNestedValue = function (
   obj: Record<string, any> = {},
-  targetPath: string = '',
+  targetPath = '',
 ) {
   for (
     let i = 0, path = targetPath.split('.'), len = path.length;

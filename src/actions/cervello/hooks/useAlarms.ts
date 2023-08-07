@@ -1,83 +1,64 @@
 import {useCallback, useState} from 'react';
-import Cervello, {cervelloInstance} from '../index';
-import {ListResponse, Options} from 'cervello.js/lib/interfaces/Common';
-import {AlarmData, AlarmStatistcs} from 'cervello.js/lib/modules/alarms';
+import Kuido, {kuidoInstance} from '../index';
+import {ListResponse, Options} from 'kuido-sdk/lib/interfaces/Common';
 import {UN_INITIALIZED_ERROR} from '../../../shared/helpers/common';
-import {Device} from 'cervello.js/lib/modules/devices';
-import {Asset} from 'cervello.js/lib/modules/assets';
+import {AlarmStatistcs, AlarmData} from 'kuido-sdk/lib/types';
 
 export interface AlarmsModule {
-  getOrganizationAlarms(options?: Options): Promise<ListResponse<AlarmData[]>>;
-  getOrganizationAlarmsStatistics(
+  getProjectAlarms(options?: Options): Promise<ListResponse<AlarmData[]>>;
+  getProjectAlarmsStatistics(
     options: Options & {group: string},
   ): Promise<ListResponse<AlarmStatistcs[]>>;
-  listenToOrganizationAlarms(callback: (alarm: AlarmData) => void): void;
-  unListenToOrganizationAlarms(): void;
-  getTagAlarms(
-    tag: string,
+  listenToProjectAlarms(callback: (alarm: AlarmData) => void): void;
+  // unListenToProjectAlarms(): void;
+  getAlarmsByThingsProfile(
+    thingsProfileId: string,
     options?: Options,
   ): Promise<ListResponse<AlarmData[]>>;
-  getTagAlarmsStatistics(
-    tag: string,
+  getAlarmsStatisticsByThingsProfile(
+    thingsProfileId: string,
     options?: Options & {group: string},
   ): Promise<ListResponse<AlarmStatistcs[]>>;
-  listenToTagAlarms(tag: string, callback: (alarm: AlarmData) => void): void;
-  unListenToTagAlarms(tag: string): void;
-  getDeviceAlarms(
-    deviceId: string,
-    options?: Options,
-  ): Promise<ListResponse<AlarmData[]>>;
-  getDeviceAlarmsStatistics(
-    deviceId: string,
-    options?: Options & {group: string},
-  ): Promise<ListResponse<AlarmStatistcs[]>>;
-  listenToDeviceAlarms(
-    deviceId: string,
-    callback: (alarm: AlarmData) => void,
-  ): void;
-  unListenToDeviceAlarms(deviceId: string): void;
-  getAssetAlarms(
-    assetId: string,
-    options?: Options,
-  ): Promise<ListResponse<AlarmData[]>>;
-  getAssetAlarmsStatistics(
-    id: string,
-    options: Options & {group: string},
-  ): Promise<ListResponse<AlarmStatistcs[]>>;
-  listenToAssetAlarms(
-    assetId: string,
-    callback: (alarm: AlarmData) => void,
-  ): void;
-  unListenToAssetAlarms(assetId: string): void;
-  clearAlarm(alarmId: string): Promise<{}>;
-  acknowledgeAlarm(alarmId: string): Promise<{}>;
-  verifyAlarm(alarmId: string): Promise<{}>;
-  ignoreAlarm(alarmId: string): Promise<{}>;
+  listenToLabelAlarms(label: string, callback: (alarm: AlarmData) => void): void;
+  // unListenToLabelAlarms(label: string): void;
+  // getThingAlarms(
+  //   thingId: string,
+  //   options?: Options,
+  // ): Promise<ListResponse<AlarmData[]>>;
+  // getThingAlarmsStatistics(
+  //   thingId: string,
+  //   options?: Options & {group: string},
+  // ): Promise<ListResponse<AlarmStatistcs[]>>;
+  // listenToThingAlarms(
+  //   thingId: string,
+  //   callback: (alarm: AlarmData) => void,
+  // ): void;
+  // unListenToThingAlarms(thingId: string): void;
 }
 
 export default function useAlarms(): AlarmsModule {
   const [isInitialized, setIsInitialized] = useState<boolean>(
-    Cervello.isInitialized,
+    Kuido.isInitialized,
   );
 
-  Cervello.observeOnInit(() => {
+  Kuido.observeOnInit(() => {
     setIsInitialized(true);
   });
 
-  const getOrganizationAlarms = useCallback(
+  const getProjectAlarms = useCallback(
     (options: any) => {
       if (!isInitialized) {
         return new Promise<ListResponse<AlarmData[]>>((resolve, reject) => {
           reject(UN_INITIALIZED_ERROR);
         });
       }
-      return Cervello.organization.alarms
+      return Kuido.project.alarms
         .list(options || {})
         .then((result) => result );
     },
     [isInitialized],
   );
-  const getOrganizationAlarmsStatistics = useCallback(
+  const getProjectAlarmsStatistics = useCallback(
     (
       options: Options & {
         group: string;
@@ -91,140 +72,142 @@ export default function useAlarms(): AlarmsModule {
         );
       }
 
-      return Cervello.organization.alarms
+      return Kuido.project.alarms
         .statistics(options || {})
         .then((result) => result );
     },
     [isInitialized],
   );
-  const listenToOrganizationAlarms = useCallback(
+  const listenToProjectAlarms = useCallback(
     (callback: (arg0: AlarmData) => void) => {
       if (!isInitialized) {
         return;
       }
 
-      return Cervello.organization.alarms.listen((alarm: AlarmData) => {
+      return Kuido.project.alarms.listen((alarm: AlarmData) => {
         callback(alarm);
       });
     },
     [isInitialized],
   );
-  const unListenToOrganizationAlarms = useCallback(() => {
-    if (!isInitialized) {
-      return;
-    }
 
-    return Cervello.organization.alarms.removeListener();
-  }, [isInitialized]);
+  
 
-  const getDeviceAlarms = useCallback(
-    (deviceId: string, options: any) => {
+  // const unListenToProjectAlarms = useCallback(() => {
+  //   if (!isInitialized) {
+  //     return;
+  //   }
+
+  //   return Kuido.project.alarms.removeListener();
+  // }, [isInitialized]);
+
+  // const getThingAlarms = useCallback(
+  //   (deviceId: string, options: any) => {
+  //     if (!isInitialized) {
+  //       return new Promise<ListResponse<AlarmData[]>>((resolve, reject) => {
+  //         reject(UN_INITIALIZED_ERROR);
+  //       });
+  //     }
+
+  //     return new Thing({
+  //       id: deviceId,
+  //       projectId: import.meta.env.VITE_APPLICATION_ID,
+  //       name: '',
+  //       deviceType: 'STANDALONE',
+  //       connectivityMedia: 'OTHER',
+  //       communicationProtocol: 'DEFAULT',
+  //       customFields: null,
+  //       lastConnectionStatus: false,
+  //       lastConnectionTime: '',
+  //     }).alarms
+  //       .list(options || {})
+  //       .then((result) => result );
+  //   },
+  //   [isInitialized],
+  // );
+
+  // const getThingAlarmsStatistics = useCallback(
+  //   (deviceId: string, options: Options & { group: string; }) => {
+  //     if (!isInitialized) {
+  //       return new Promise<ListResponse<AlarmStatistcs[]>>(
+  //         (resolve, reject) => {
+  //           reject(UN_INITIALIZED_ERROR);
+  //         },
+  //       );
+  //     }
+
+  //     return new Device({
+  //       id: deviceId,
+  //       projectId: import.meta.env.VITE_APPLICATION_ID,
+  //       name: '',
+  //       deviceType: 'STANDALONE',
+  //       connectivityMedia: 'OTHER',
+  //       communicationProtocol: 'DEFAULT',
+  //       customFields: null,
+  //       lastConnectionStatus: false,
+  //       lastConnectionTime: '',
+  //     }).alarms
+  //       .statistics({offset: 1, limit: 10, ...options, groupBy:"mina"} || {})
+  //       .then((result) => result );
+  //   },
+  //   [isInitialized],
+  // );
+  // const listenToThingAlarms = useCallback(
+  //   (deviceId: string, callback: (arg0: AlarmData) => void) => {
+  //     if (!isInitialized) {
+  //       return;
+  //     }
+
+  //     return new Device({
+  //       id: deviceId,
+  //       projectId: import.meta.env.VITE_APPLICATION_ID,
+  //       name: '',
+  //       deviceType: 'STANDALONE',
+  //       connectivityMedia: 'OTHER',
+  //       communicationProtocol: 'DEFAULT',
+  //       customFields: null,
+  //       lastConnectionStatus: false,
+  //       lastConnectionTime: '',
+  //     }).alarms.listen((alarm: AlarmData) => {
+  //       callback(alarm);
+  //     });
+  //   },
+  //   [isInitialized],
+  // );
+  // const unListenToThingAlarms = useCallback(
+  //   (deviceId: string) => {
+  //     if (!isInitialized) {
+  //       return;
+  //     }
+
+  //     return new Device({
+  //       id: deviceId,
+  //       projectId: import.meta.env.VITE_APPLICATION_ID,
+  //       name: '',
+  //       deviceType: 'STANDALONE',
+  //       connectivityMedia: 'OTHER',
+  //       communicationProtocol: 'DEFAULT',
+  //       customFields: null,
+  //       lastConnectionStatus: false,
+  //       lastConnectionTime: '',
+  //     }).alarms.removeListener();
+  //   },
+  //   [isInitialized],
+  // );
+
+  const getAlarmsByThingsProfile = useCallback(
+    (label: string, options: Options) => {
       if (!isInitialized) {
         return new Promise<ListResponse<AlarmData[]>>((resolve, reject) => {
           reject(UN_INITIALIZED_ERROR);
         });
       }
 
-      return new Device({
-        id: deviceId,
-        organizationId: import.meta.env.REACT_APP_ORGANIZATION_ID,
-        name: '',
-        deviceType: 'STANDALONE',
-        connectivityMedia: 'OTHER',
-        communicationProtocol: 'DEFAULT',
-        customFields: null,
-        lastConnectionStatus: false,
-        lastConnectionTime: '',
-      }).alarms
-        .list(options || {})
-        .then((result) => result );
-    },
-    [isInitialized],
-  );
-
-  const getDeviceAlarmsStatistics = useCallback(
-    (deviceId: string, options: Options & { group: string; }) => {
-      if (!isInitialized) {
-        return new Promise<ListResponse<AlarmStatistcs[]>>(
-          (resolve, reject) => {
-            reject(UN_INITIALIZED_ERROR);
-          },
-        );
-      }
-
-      return new Device({
-        id: deviceId,
-        organizationId: import.meta.env.VITE_ORGANIZATION_ID,
-        name: '',
-        deviceType: 'STANDALONE',
-        connectivityMedia: 'OTHER',
-        communicationProtocol: 'DEFAULT',
-        customFields: null,
-        lastConnectionStatus: false,
-        lastConnectionTime: '',
-      }).alarms
-        .statistics({pageNumber: 1, pageSize: 10, ...options} || {})
-        .then((result) => result );
-    },
-    [isInitialized],
-  );
-
-  const listenToDeviceAlarms = useCallback(
-    (deviceId: string, callback: (arg0: AlarmData) => void) => {
-      if (!isInitialized) {
-        return;
-      }
-
-      return new Device({
-        id: deviceId,
-        organizationId: import.meta.env.VITE_ORGANIZATION_ID,
-        name: '',
-        deviceType: 'STANDALONE',
-        connectivityMedia: 'OTHER',
-        communicationProtocol: 'DEFAULT',
-        customFields: null,
-        lastConnectionStatus: false,
-        lastConnectionTime: '',
-      }).alarms.listen((alarm: AlarmData) => {
-        callback(alarm);
-      });
-    },
-    [isInitialized],
-  );
-  const unListenToDeviceAlarms = useCallback(
-    (deviceId: string) => {
-      if (!isInitialized) {
-        return;
-      }
-
-      return new Device({
-        id: deviceId,
-        organizationId: import.meta.env.VITE_ORGANIZATION_ID,
-        name: '',
-        deviceType: 'STANDALONE',
-        connectivityMedia: 'OTHER',
-        communicationProtocol: 'DEFAULT',
-        customFields: null,
-        lastConnectionStatus: false,
-        lastConnectionTime: '',
-      }).alarms.removeListener();
-    },
-    [isInitialized],
-  );
-
-  const getTagAlarms = useCallback(
-    (tag: string, options: Options) => {
-      if (!isInitialized) {
-        return new Promise<ListResponse<AlarmData[]>>((resolve, reject) => {
-          reject(UN_INITIALIZED_ERROR);
-        });
-      }
-
-      return cervelloInstance.tags
+      return kuidoInstance.labels
         .alarms({
           params: {
-            organizationId: Cervello.params.organizationId || '',
-            tag,
+            projectId: Kuido.params.projectId || '',
+            label,
           },
         })
         .list(options || {})
@@ -234,9 +217,9 @@ export default function useAlarms(): AlarmsModule {
     },
     [isInitialized],
   );
-  const getTagAlarmsStatistics = useCallback(
+  const getAlarmsStatisticsByThingsProfile = useCallback(
     (
-      tag: string,
+      label: string,
       options: Options & {
         group: string;
       },
@@ -249,11 +232,11 @@ export default function useAlarms(): AlarmsModule {
         );
       }
 
-      return cervelloInstance.tags
+      return kuidoInstance.labels
         .alarms({
           params: {
-            organizationId: Cervello.params.organizationId || '',
-            tag,
+            projectId: Kuido.params.projectId || '',
+            label,
           },
         })
         .statistics(options)
@@ -263,17 +246,17 @@ export default function useAlarms(): AlarmsModule {
     },
     [isInitialized],
   );
-  const listenToTagAlarms = useCallback(
-    (tag: any, callback: (arg0: AlarmData) => void) => {
+  const listenToLabelAlarms = useCallback(
+    (label: any, callback: (arg0: AlarmData) => void) => {
       if (!isInitialized) {
         return;
       }
       try {
-        return cervelloInstance.tags
+        return kuidoInstance.labels
           .alarms({
             params: {
-              organizationId: Cervello.params.organizationId || '',
-              tag,
+              projectId: Kuido.params.projectId || '',
+              label,
             },
           })
           .listen((alarm) => {
@@ -285,208 +268,36 @@ export default function useAlarms(): AlarmsModule {
     },
     [isInitialized],
   );
-  const unListenToTagAlarms = useCallback(
-    (tag: any) => {
-      if (!isInitialized) {
-        return;
-      }
+  // const unListenToLabelAlarms = useCallback(
+  //   (label: string) => {
+  //     if (!isInitialized) {
+  //       return;
+  //     }
 
-      return cervelloInstance.tags
-        .alarms({
-          params: {
-            organizationId: Cervello.params.organizationId || '',
-            tag,
-          },
-        })
-        .removeListener();
-    },
-    [isInitialized],
-  );
-
-  const getAssetAlarms = useCallback(
-    (id: string, options: any) => {
-      if (!isInitialized) {
-        return new Promise<ListResponse<AlarmData[]>>((resolve, reject) => {
-          reject(UN_INITIALIZED_ERROR);
-        });
-      }
-
-      // return cervelloInstance.assets
-      //   .get({
-      //     params: {
-      //       organizationId: Cervello.params.organizationId || '',
-      //       applicationId: Cervello.params.applicationId || '',
-      //       assetId: id,
-      //     },
-      //   })
-      //   .then((asset) => {
-      //     return asset.alarms.list(options || {}).then((result) => {
-      //       return result as ListResponse<AlarmData[]>;
-      //     });
-      //   });
-      return new Asset({
-        id,
-        organizationId: Cervello.params.organizationId!,
-        applicationId: Cervello.params.applicationId!,
-        name: '',
-        resourceId: id,
-        customFields: null,
-      }).alarms.list(options || {});
-      // .then((result) => result as ListResponse<AlarmData[]>);
-    },
-    [isInitialized],
-  );
-  const getAssetAlarmsStatistics = useCallback(
-    (
-      id: string,
-      options: Options & {
-        group: string;
-      },
-    ) => {
-      if (!isInitialized) {
-        return new Promise<ListResponse<AlarmStatistcs[]>>(
-          (resolve, reject) => {
-            reject(UN_INITIALIZED_ERROR);
-          },
-        );
-      }
-
-      // return cervelloInstance.assets
-      //   .get({
-      //     params: {
-      //       organizationId: Cervello.params.organizationId || '',
-      //       applicationId: Cervello.params.applicationId || '',
-      //       assetId,
-      //     },
-      //   })
-      //   .then((asset) => {
-      //     return asset.alarms
-      //       .statistics(options || {})
-      //       .then((result) => result as ListResponse<AlarmStatistcs[]>);
-      //   });
-      return new Asset({
-        id,
-        organizationId: Cervello.params.organizationId!,
-        applicationId: Cervello.params.applicationId!,
-        name: '',
-        resourceId: id,
-        customFields: null,
-      }).alarms.statistics(options || {});
-    },
-    [isInitialized],
-  );
-  const listenToAssetAlarms = useCallback(
-    (assetId: any, callback: (arg0: AlarmData) => void) => {
-      if (!isInitialized) {
-        return;
-      }
-
-      return cervelloInstance.assets
-        .get({
-          params: {
-            organizationId: Cervello.params.organizationId || '',
-            applicationId: Cervello.params.applicationId || '',
-            assetId,
-          },
-        })
-        .then((asset) => {
-          return asset.alarms.listen((alarm) => {
-            callback(alarm);
-          });
-        });
-    },
-    [isInitialized],
-  );
-  const unListenToAssetAlarms = useCallback(
-    (assetId: any) => {
-      if (!isInitialized) {
-        return;
-      }
-
-      return cervelloInstance.assets
-        .get({
-          params: {
-            organizationId: Cervello.params.organizationId || '',
-            applicationId: Cervello.params.applicationId || '',
-            assetId,
-          },
-        })
-        .then((asset) => {
-          return asset.alarms.removeListener();
-        });
-    },
-    [isInitialized],
-  );
-
-  const acknowledgeAlarm = useCallback(
-    (alarmId: string) => {
-      if (!isInitialized) {
-        return new Promise<{}>((resolve, reject) => {
-          reject(UN_INITIALIZED_ERROR);
-        });
-      }
-
-      return Cervello.organization.alarms.acknowledge(alarmId);
-    },
-    [isInitialized],
-  );
-  const clearAlarm = useCallback(
-    (alarmId: string) => {
-      if (!isInitialized) {
-        return new Promise<{}>((resolve, reject) => {
-          reject(UN_INITIALIZED_ERROR);
-        });
-      }
-
-      return Cervello.organization.alarms.clear(alarmId);
-    },
-    [isInitialized],
-  );
-  const verifyAlarm = useCallback(
-    (alarmId: string) => {
-      if (!isInitialized) {
-        return new Promise<{}>((resolve, reject) => {
-          reject(UN_INITIALIZED_ERROR);
-        });
-      }
-
-      return Cervello.organization.alarms.verify(alarmId);
-    },
-    [isInitialized],
-  );
-  const ignoreAlarm = useCallback(
-    (alarmId: string) => {
-      if (!isInitialized) {
-        return new Promise<{}>((resolve, reject) => {
-          reject(UN_INITIALIZED_ERROR);
-        });
-      }
-
-      return Cervello.organization.alarms.ignore(alarmId);
-    },
-    [isInitialized],
-  );
+  //     return kuidoInstance.labels
+  //       .alarms({
+  //         params: {
+  //           projectId: Kuido.params.projectId || '',
+  //           label,
+  //         },
+  //       })
+  //       .removeListener();
+  //   },
+  //   [isInitialized],
+  // );
 
   return {
-    getOrganizationAlarms,
-    getOrganizationAlarmsStatistics,
-    listenToOrganizationAlarms,
-    unListenToOrganizationAlarms,
-    getDeviceAlarms,
-    getDeviceAlarmsStatistics,
-    listenToDeviceAlarms,
-    unListenToDeviceAlarms,
-    getTagAlarms,
-    getTagAlarmsStatistics,
-    listenToTagAlarms,
-    unListenToTagAlarms,
-    getAssetAlarms,
-    getAssetAlarmsStatistics,
-    listenToAssetAlarms,
-    unListenToAssetAlarms,
-    acknowledgeAlarm,
-    clearAlarm,
-    verifyAlarm,
-    ignoreAlarm,
+    getProjectAlarms,
+    getProjectAlarmsStatistics,
+    listenToProjectAlarms,
+    // unListenToProjectAlarms,
+    // getThingAlarms,
+    // getThingAlarmsStatistics,
+    // listenToThingAlarms,
+    // unListenToThingAlarms,
+    getAlarmsByThingsProfile,
+    getAlarmsStatisticsByThingsProfile,
+    listenToLabelAlarms,
+    // unListenToLabelAlarms,
   };
 }

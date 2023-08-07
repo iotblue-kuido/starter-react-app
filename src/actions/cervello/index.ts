@@ -1,40 +1,40 @@
-import * as CervelloJS from 'cervello.js';
-import useOrganization from './hooks/useOrganization';
-import useDevices from './hooks/useDevices';
+import * as KuidoJS from 'kuido-sdk';
+// import useOrganization from './hooks/useOrganization';
 import useAlarms from './hooks/useAlarms';
-import useTelemetries from './hooks/useTelemetries';
-import useAttributes from './hooks/useAttributes';
-import useAssets from './hooks/useAssets';
-import {Params} from 'cervello.js/lib/interfaces/Common';
-import {Organization} from 'cervello.js/lib/modules/organizations';
-import {Options as AuthOptions} from 'cervello.js/lib/adapters/auth';
+// import useDevices from './hooks/useDevices';
+// import useTelemetries from './hooks/useTelemetries';
+// import useAttributes from './hooks/useAttributes';
+// import useAssets from './hooks/useAssets';
+import {Options as AuthOptions} from 'kuido-sdk/lib/adapters/auth';
+import { Params } from 'kuido-sdk/lib/interfaces/Common';
+import { Project } from 'kuido-sdk/lib/modules/entities/projects';
 
-export let cervelloInstance: CervelloJS.Modules;
+export let kuidoInstance: KuidoJS.Modules;
 
-export default class Cervello {
+export default class Kuido {
   static params: Partial<Params> = {};
   static observers: Function[] = [];
   static socketObservers: ((status: boolean) => void)[] = [];
   static isInitialized = false;
-  static organization: Organization;
+  static project: Project;
 
   static init(config: AuthOptions): void {
-    CervelloJS.init(config)
+    KuidoJS.init(config)
       .then(instance => {
-        cervelloInstance = instance ;
+        kuidoInstance = instance ;
 
-        if (Cervello.params.organizationId) {
-          cervelloInstance.organizations
-            .get({params: {organizationId: Cervello.params.organizationId}})
-            .then((organization: Organization) => {
-              Cervello.organization = organization;
-              Cervello.isInitialized = true;
+        if (Kuido.params.projectId) {
+          kuidoInstance.projects
+            .get(Kuido.params.projectId)
+            .then((project:Project ) => {
+              Kuido.project = project;
+              Kuido.isInitialized = true;
 
-              Cervello.observers.forEach(observer => {
+              Kuido.observers.forEach(observer => {
                 observer();
               });
 
-              Cervello.socketObservers.forEach(observer => {
+              Kuido.socketObservers.forEach(observer => {
                 instance.observeOnSocketStatus(observer);
               });
             });
@@ -42,18 +42,18 @@ export default class Cervello {
       })
       .catch(e => {
         console.log({e});
-        Cervello.socketObservers.forEach(observer => {
+        Kuido.socketObservers.forEach(observer => {
           observer(false);
         });
       });
   }
   static observeOnInit(callback: Function): void {
-    Cervello.observers.push(callback);
+    Kuido.observers.push(callback);
   }
 
   static observeOnSocketStatus(callback: (status: boolean) => void): void {
-    Cervello.socketObservers.push(callback);
+    Kuido.socketObservers.push(callback);
   }
 }
 
-export {useDevices, useAlarms, useAssets, useAttributes, useOrganization, useTelemetries};
+export { useAlarms};
