@@ -7,7 +7,7 @@
   resolved "https://repo.iotblue.io/repository/npm-group/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
-"@amcharts/amcharts4@^4.10.36":
+"@amcharts/amcharts4@^4.10.22":
   version "4.10.37"
   resolved "https://repo.iotblue.io/repository/npm-group/@amcharts/amcharts4/-/amcharts4-4.10.37.tgz#ee9cd3128b6068a6d757d78f3e6a7fbcb24369a0"
   integrity sha512-MA0yf2USqoN6W8se2IVKkn8j+hPCkisGtDZAID1JrlzJFPqrswNpGh2h+LO/ofX2kFROcoHZQ8/q2R6BHCa5qQ==
@@ -379,115 +379,115 @@
   resolved "https://repo.iotblue.io/repository/npm-group/@emotion/weak-memoize/-/weak-memoize-0.3.1.tgz#d0fce5d07b0620caa282b5131c297bb60f9d87e6"
   integrity sha512-EsBwpc7hBUJWAsNPBmJy4hxWx12v6bshQsldrVmjxJoc3isbxhOrF2IcCpaXxfvq03NwkI7sbsOLXbYuqF/8Ww==
 
-"@esbuild/android-arm64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/android-arm64/-/android-arm64-0.18.19.tgz#8735b552b8e0b9a943460d37fbc976b9d9cd4b4e"
-  integrity sha512-4+jkUFQxZkQfQOOxfGVZB38YUWHMJX2ihZwF+2nh8m7bHdWXpixiurgGRN3c/KMSwlltbYI0/i929jwBRMFzbA==
+"@esbuild/android-arm64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/android-arm64/-/android-arm64-0.18.18.tgz#a52e0a1276065b1bf6b2de45b482cf36b6b945bd"
+  integrity sha512-dkAPYzRHq3dNXIzOyAknYOzsx8o3KWaNiuu56B2rP9IFPmFWMS58WQcTlUQi6iloku8ZyHHMluCe5sTWhKq/Yw==
 
-"@esbuild/android-arm@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/android-arm/-/android-arm-0.18.19.tgz#efd1f33583a893c0cc57f25b1d081af8cdc6bfd9"
-  integrity sha512-1uOoDurJYh5MNqPqpj3l/TQCI1V25BXgChEldCB7D6iryBYqYKrbZIhYO5AI9fulf66sM8UJpc3UcCly2Tv28w==
+"@esbuild/android-arm@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/android-arm/-/android-arm-0.18.18.tgz#ffd591b956ced1c96e1224edfbed1001adadf2ae"
+  integrity sha512-oBymf7ZwplAawSxmiSlBCf+FMcY0f4bs5QP2jn43JKUf0M9DnrUTjqa5RvFPl1elw+sMfcpfBRPK+rb+E1q7zg==
 
-"@esbuild/android-x64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/android-x64/-/android-x64-0.18.19.tgz#d9f35722701a97a2ef69c7a84f1ee2aef2a306a7"
-  integrity sha512-ae5sHYiP/Ogj2YNrLZbWkBmyHIDOhPgpkGvFnke7XFGQldBDWvc/AyYwSLpNuKw9UNkgnLlB/jPpnBmlF3G9Bg==
+"@esbuild/android-x64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/android-x64/-/android-x64-0.18.18.tgz#6e8a7b41fc80265849e0a1de928fe162b27990c7"
+  integrity sha512-r7/pVcrUQMYkjvtE/1/n6BxhWM+/9tvLxDG1ev1ce4z3YsqoxMK9bbOM6bFcj0BowMeGQvOZWcBV182lFFKmrw==
 
-"@esbuild/darwin-arm64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/darwin-arm64/-/darwin-arm64-0.18.19.tgz#8cb81b971ee5231acc7de07225f6e18562c359e4"
-  integrity sha512-HIpQvNQWFYROmWDANMRL+jZvvTQGOiTuwWBIuAsMaQrnStedM+nEKJBzKQ6bfT9RFKH2wZ+ej+DY7+9xHBTFPg==
+"@esbuild/darwin-arm64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/darwin-arm64/-/darwin-arm64-0.18.18.tgz#36755dc44cefac6c56e82ed3b67f9d457ca27156"
+  integrity sha512-MSe2iV9MAH3wfP0g+vzN9bp36rtPPuCSk+bT5E2vv/d8krvW5uB/Pi/Q5+txUZuxsG3GcO8dhygjnFq0wJU9hQ==
 
-"@esbuild/darwin-x64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/darwin-x64/-/darwin-x64-0.18.19.tgz#81024ab64232dd323f03796d449f018b59f04ca9"
-  integrity sha512-m6JdvXJQt0thNLIcWOeG079h2ivhYH4B5sVCgqb/B29zTcFd7EE8/J1nIUHhdtwGeItdUeqKaqqb4towwxvglQ==
+"@esbuild/darwin-x64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/darwin-x64/-/darwin-x64-0.18.18.tgz#8aa691d0cbd3fb67f9f9083375c0c72e0463b8b2"
+  integrity sha512-ARFYISOWkaifjcr48YtO70gcDNeOf1H2RnmOj6ip3xHIj66f3dAbhcd5Nph5np6oHI7DhHIcr9MWO18RvUL1bw==
 
-"@esbuild/freebsd-arm64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/freebsd-arm64/-/freebsd-arm64-0.18.19.tgz#9fa91e3b08d10c0adfa71b37372a7627b26e9686"
-  integrity sha512-G0p4EFMPZhGn/xVNspUyMQbORH3nlKTV0bFNHPIwLraBuAkTeMyxNviTe0ZXUbIXQrR1lrwniFjNFU4s+x7veQ==
+"@esbuild/freebsd-arm64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/freebsd-arm64/-/freebsd-arm64-0.18.18.tgz#0aafde382df508d7863360950d5f491c07024806"
+  integrity sha512-BHnXmexzEWRU2ZySJosU0Ts0NRnJnNrMB6t4EiIaOSel73I8iLsNiTPLH0rJulAh19cYZutsB5XHK6N8fi5eMg==
 
-"@esbuild/freebsd-x64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/freebsd-x64/-/freebsd-x64-0.18.19.tgz#ef6f5a85c1bb029fb0076da5b223e50b353e615c"
-  integrity sha512-hBxgRlG42+W+j/1/cvlnSa+3+OBKeDCyO7OG2ICya1YJaSCYfSpuG30KfOnQHI7Ytgu4bRqCgrYXxQEzy0zM5Q==
+"@esbuild/freebsd-x64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/freebsd-x64/-/freebsd-x64-0.18.18.tgz#f00e54a3b65824ac3c749173bec9cd56d95fe73b"
+  integrity sha512-n823w35wm0ZOobbuE//0sJjuz1Qj619+AwjgOcAJMN2pomZhH9BONCtn+KlfrmM/NWZ+27yB/eGVFzUIWLeh3w==
 
-"@esbuild/linux-arm64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-arm64/-/linux-arm64-0.18.19.tgz#0cef913dcdc1efb1bb04406a8e5f5668b721d89e"
-  integrity sha512-X8g33tczY0GsJq3lhyBrjnFtaKjWVpp1gMq5IlF9BQJ3TUfSK74nQnz9mRIEejmcV+OIYn6bkOJeUaU1Knrljg==
+"@esbuild/linux-arm64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-arm64/-/linux-arm64-0.18.18.tgz#e04203429670257126a1bfee79bbd56448b24f5e"
+  integrity sha512-zANxnwF0sCinDcAqoMohGoWBK9QaFJ65Vgh0ZE+RXtURaMwx+RfmfLElqtnn7X8OYNckMoIXSg7u+tZ3tqTlrA==
 
-"@esbuild/linux-arm@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-arm/-/linux-arm-0.18.19.tgz#39ea874c8e5177b83903bec1883a43f3c163627a"
-  integrity sha512-qtWyoQskfJlb9MD45mvzCEKeO4uCnDZ7lPFeNqbfaaJHqBiH9qA5Vu2EuckqYZuFMJWy1l4dxTf9NOulCVfUjg==
+"@esbuild/linux-arm@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-arm/-/linux-arm-0.18.18.tgz#863236dc47df2269f860001ca5c5ff50931e9933"
+  integrity sha512-Kck3jxPLQU4VeAGwe8Q4NU+IWIx+suULYOFUI9T0C2J1+UQlOHJ08ITN+MaJJ+2youzJOmKmcphH/t3SJxQ1Tw==
 
-"@esbuild/linux-ia32@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-ia32/-/linux-ia32-0.18.19.tgz#283cd3c3d8380e8fab90583fa86ca1fcc9b9ec57"
-  integrity sha512-SAkRWJgb+KN+gOhmbiE6/wu23D6HRcGQi15cB13IVtBZZgXxygTV5GJlUAKLQ5Gcx0gtlmt+XIxEmSqA6sZTOw==
+"@esbuild/linux-ia32@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-ia32/-/linux-ia32-0.18.18.tgz#9ef6c7eeb8c86c5c1b7234a9684c6f45cbc2ed57"
+  integrity sha512-+VHz2sIRlY5u8IlaLJpdf5TL2kM76yx186pW7bpTB+vLWpzcFQVP04L842ZB2Ty13A1VXUvy3DbU1jV65P2skg==
 
-"@esbuild/linux-loong64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-loong64/-/linux-loong64-0.18.19.tgz#1c69d7928a55b26326398d31d2ac9c82d2297f1b"
-  integrity sha512-YLAslaO8NsB9UOxBchos82AOMRDbIAWChwDKfjlGrHSzS3v1kxce7dGlSTsrb0PJwo1KYccypN3VNjQVLtz7LA==
+"@esbuild/linux-loong64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-loong64/-/linux-loong64-0.18.18.tgz#dca8624674924ac92c9e56399af160479283f130"
+  integrity sha512-fXPEPdeGBvguo/1+Na8OIWz3667BN1cwbGtTEZWTd0qdyTsk5gGf9jVX8MblElbDb/Cpw6y5JiaQuL96YmvBwQ==
 
-"@esbuild/linux-mips64el@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-mips64el/-/linux-mips64el-0.18.19.tgz#b25b352e7645885fa1d01182116c506a78fe4733"
-  integrity sha512-vSYFtlYds/oTI8aflEP65xo3MXChMwBOG1eWPGGKs/ev9zkTeXVvciU+nifq8J1JYMz+eQ4J9JDN0O2RKF8+1Q==
+"@esbuild/linux-mips64el@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-mips64el/-/linux-mips64el-0.18.18.tgz#e6525b60ae9d8c3bdc652a773e6ebf66caa3fdd3"
+  integrity sha512-dLvRB87pIBIRnEIC32LIcgwK1JzlIuADIRjLKdUIpxauKwMuS/xMpN+cFl+0nN4RHNYOZ57DmXFFmQAcdlFOmw==
 
-"@esbuild/linux-ppc64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-ppc64/-/linux-ppc64-0.18.19.tgz#568b5a051f47af732c4314e697bb559a14b3d811"
-  integrity sha512-tgG41lRVwlzqO9tv9l7aXYVw35BxKXLtPam1qALScwSqPivI8hjkZLNH0deaaSCYCFT9cBIdB+hUjWFlFFLL9A==
+"@esbuild/linux-ppc64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-ppc64/-/linux-ppc64-0.18.18.tgz#2ea6a4e0c6b0db21770d2c3c1525623dceadfe46"
+  integrity sha512-fRChqIJZ7hLkXSKfBLYgsX9Ssb5OGCjk3dzCETF5QSS1qjTgayLv0ALUdJDB9QOh/nbWwp+qfLZU6md4XcjL7w==
 
-"@esbuild/linux-riscv64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-riscv64/-/linux-riscv64-0.18.19.tgz#020729b47ca63321667297d1610bab81cd08a65c"
-  integrity sha512-EgBZFLoN1S5RuB4cCJI31pBPsjE1nZ+3+fHRjguq9Ibrzo29bOLSBcH1KZJvRNh5qtd+fcYIGiIUia8Jw5r1lQ==
+"@esbuild/linux-riscv64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-riscv64/-/linux-riscv64-0.18.18.tgz#296c25d5bdeb3bab9ca79ad5279a8cc0a42fbeea"
+  integrity sha512-ALK/BT3u7Hoa/vHjow6W6+MKF0ohYcVcVA1EpskI4bkBPVuDLrUDqt2YFifg5UcZc8qup0CwQqWmFUd6VMNgaA==
 
-"@esbuild/linux-s390x@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-s390x/-/linux-s390x-0.18.19.tgz#ed5cca8dac130d2f736914f9efad5fa15c238c20"
-  integrity sha512-q1V1rtHRojAzjSigZEqrcLkpfh5K09ShCoIsdTakozVBnM5rgV58PLFticqDp5UJ9uE0HScov9QNbbl8HBo6QQ==
+"@esbuild/linux-s390x@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-s390x/-/linux-s390x-0.18.18.tgz#bec4e9c982e778c51deaa754e1ed3f0546705647"
+  integrity sha512-crT7jtOXd9iirY65B+mJQ6W0HWdNy8dtkZqKGWNcBnunpLcTCfne5y5bKic9bhyYzKpQEsO+C/VBPD8iF0RhRw==
 
-"@esbuild/linux-x64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-x64/-/linux-x64-0.18.19.tgz#f8023a38ae02b46c60a134ccbc7ae377b3bec66f"
-  integrity sha512-D0IiYjpZRXxGZLQfsydeAD7ZWqdGyFLBj5f2UshJpy09WPs3qizDCsEr8zyzcym6Woj/UI9ZzMIXwvoXVtyt0A==
+"@esbuild/linux-x64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/linux-x64/-/linux-x64-0.18.18.tgz#22c9666920d3b7ef453289516ccff1c3ecbfdddd"
+  integrity sha512-/NSgghjBOW9ELqjXDYxOCCIsvQUZpvua1/6NdnA9Vnrp9UzEydyDdFXljUjMMS9p5KxMzbMO9frjHYGVHBfCHg==
 
-"@esbuild/netbsd-x64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/netbsd-x64/-/netbsd-x64-0.18.19.tgz#8fd667c535db0a5b346afa2d74ff1fb53477427f"
-  integrity sha512-3tt3SOS8L3D54R8oER41UdDshlBIAjYhdWRPiZCTZ1E41+shIZBpTjaW5UaN/jD1ENE/Ok5lkeqhoNMbxstyxw==
+"@esbuild/netbsd-x64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/netbsd-x64/-/netbsd-x64-0.18.18.tgz#99b6125868c5ba8f0131bacc3f2bd05918245f45"
+  integrity sha512-8Otf05Vx5sZjLLDulgr5QS5lsWXMplKZEyHMArH9/S4olLlhzmdhQBPhzhJTNwaL2FJNdWcUPNGAcoD5zDTfUA==
 
-"@esbuild/openbsd-x64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/openbsd-x64/-/openbsd-x64-0.18.19.tgz#354d5b54a6bffa381cb513e878880192e07004be"
-  integrity sha512-MxbhcuAYQPlfln1EMc4T26OUoeg/YQc6wNoEV8xvktDKZhLtBxjkoeESSo9BbPaGKhAPzusXYj5n8n5A8iZSrA==
+"@esbuild/openbsd-x64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/openbsd-x64/-/openbsd-x64-0.18.18.tgz#c2685bdd1e5aa11be1e212db371f474812a9b158"
+  integrity sha512-tFiFF4kT5L5qhVrWJUNxEXWvvX8nK/UX9ZrB7apuTwY3f6+Xy4aFMBPwAVrBYtBd5MOUuyOVHK6HBZCAHkwUlw==
 
-"@esbuild/sunos-x64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/sunos-x64/-/sunos-x64-0.18.19.tgz#e2de98bd961e04f76f6acf5970263efc7051def5"
-  integrity sha512-m0/UOq1wj25JpWqOJxoWBRM9VWc3c32xiNzd+ERlYstUZ6uwx5SZsQUtkiFHaYmcaoj+f6+Tfcl7atuAz3idwQ==
+"@esbuild/sunos-x64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/sunos-x64/-/sunos-x64-0.18.18.tgz#277b2f5727119fe3004e673eb9f6ead0b4ff0738"
+  integrity sha512-MPogVV8Bzh8os4OM+YDGGsSzCzmNRiyKGtHoJyZLtI4BMmd6EcxmGlcEGK1uM46h1BiOyi7Z7teUtzzQhvkC+w==
 
-"@esbuild/win32-arm64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/win32-arm64/-/win32-arm64-0.18.19.tgz#9dca55f0dcbbdb50bf36353d1114f5f71c269275"
-  integrity sha512-L4vb6pcoB1cEcXUHU6EPnUhUc4+/tcz4OqlXTWPcSQWxegfmcOprhmIleKKwmMNQVc4wrx/+jB7tGkjjDmiupg==
+"@esbuild/win32-arm64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/win32-arm64/-/win32-arm64-0.18.18.tgz#e94d9e6d058e0ccb92d858badd4a6aa74772150e"
+  integrity sha512-YKD6LF/XXY9REu+ZL5RAsusiG48n602qxsMVh/E8FFD9hp4OyTQaL9fpE1ovxwQXqFio+tT0ITUGjDSSSPN13w==
 
-"@esbuild/win32-ia32@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/win32-ia32/-/win32-ia32-0.18.19.tgz#db6ea4467e87e6d3fc2177dea35e81f26f7a061d"
-  integrity sha512-rQng7LXSKdrDlNDb7/v0fujob6X0GAazoK/IPd9C3oShr642ri8uIBkgM37/l8B3Rd5sBQcqUXoDdEy75XC/jg==
+"@esbuild/win32-ia32@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/win32-ia32/-/win32-ia32-0.18.18.tgz#454916b1d0b85d2f82252192ae7bd5ea65c98ea1"
+  integrity sha512-NjSBmBsyZBTsZB6ga6rA6PfG/RHnwruUz/9YEVXcm4STGauFWvhYhOMhEyw1yU5NVgYYm8CH5AltCm77TS21/Q==
 
-"@esbuild/win32-x64@0.18.19":
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/win32-x64/-/win32-x64-0.18.19.tgz#6105755d7097e0d7e22f893c3e62f143d8137bd0"
-  integrity sha512-z69jhyG20Gq4QL5JKPLqUT+eREuqnDAFItLbza4JCmpvUnIlY73YNjd5djlO7kBiiZnvTnJuAbOjIoZIOa1GjA==
+"@esbuild/win32-x64@0.18.18":
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/@esbuild/win32-x64/-/win32-x64-0.18.18.tgz#914c007ab1dbd28ca84e79ee666adeee6ccf92b4"
+  integrity sha512-eTSg/gC3p3tdjj4roDhe5xu94l1s2jMazP8u2FsYO8SEKvSpPOO71EucprDn/IuErDPvTFUhV9lTw5z5WJCRKQ==
 
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.0"
@@ -500,6 +500,21 @@
   version "4.6.2"
   resolved "https://repo.iotblue.io/repository/npm-group/@eslint-community/regexpp/-/regexpp-4.6.2.tgz#1816b5f6948029c5eaacb0703b850ee0cb37d8f8"
   integrity sha512-pPTNuaAG3QMH+buKyBIGJs3g/S5y0caxw0ygM3YyE6yJFySwiGGSzA+mM3KJ8QQvzeLh3blwgSonkFjgQdxzMw==
+
+"@eslint/eslintrc@^1.3.3":
+  version "1.4.1"
+  resolved "https://repo.iotblue.io/repository/npm-group/@eslint/eslintrc/-/eslintrc-1.4.1.tgz#af58772019a2d271b7e2d4c23ff4ddcba3ccfb3e"
+  integrity sha512-XXrH9Uarn0stsyldqDYq8r++mROmWRI1xKMXa640Bb//SY1+ECYX6VzT6Lcx5frD0V30XieqJ0oX9I2Xj5aoMA==
+  dependencies:
+    ajv "^6.12.4"
+    debug "^4.3.2"
+    espree "^9.4.0"
+    globals "^13.19.0"
+    ignore "^5.2.0"
+    import-fresh "^3.2.1"
+    js-yaml "^4.1.0"
+    minimatch "^3.1.2"
+    strip-json-comments "^3.1.1"
 
 "@eslint/eslintrc@^2.1.1":
   version "2.1.1"
@@ -607,7 +622,7 @@
   resolved "https://repo.iotblue.io/repository/npm-group/@fontsource/roboto/-/roboto-5.0.8.tgz#613b477a56f21b5705db1a67e995c033ef317f76"
   integrity sha512-XxPltXs5R31D6UZeLIV1td3wTXU3jzd3f2DLsXI8tytMGBkIsGcc9sIyiupRtA8y73HAhuSCeweOoBqf6DbWCA==
 
-"@humanwhocodes/config-array@^0.11.10":
+"@humanwhocodes/config-array@^0.11.10", "@humanwhocodes/config-array@^0.11.6":
   version "0.11.10"
   resolved "https://repo.iotblue.io/repository/npm-group/@humanwhocodes/config-array/-/config-array-0.11.10.tgz#5a3ffe32cc9306365fb3fd572596cd602d5e12d2"
   integrity sha512-KVVjQmNUepDVGXNuoRRdmmEjruj0KfiGSbS8LVc12LMsWDQzRXJ0qdhN8L8uUigKpfEHRhlaQFY0ib1tnUbNeQ==
@@ -1109,17 +1124,10 @@
   resolved "https://repo.iotblue.io/repository/npm-group/@types/chai/-/chai-4.3.5.tgz#ae69bcbb1bebb68c4ac0b11e9d8ed04526b3562b"
   integrity sha512-mEo1sAde+UCE6b2hxn332f1g1E8WfYRu6p5SvTKr2ZKC1f7gFJXk4h5PyGP9Dt6gCaG8y8XhwnXWC6Iy2cmBng==
 
-"@types/chart.js@^2.9.37":
-  version "2.9.37"
-  resolved "https://repo.iotblue.io/repository/npm-group/@types/chart.js/-/chart.js-2.9.37.tgz#8af70862b154fedf938b5b87debdb3a70f6e3208"
-  integrity sha512-9bosRfHhkXxKYfrw94EmyDQcdjMaQPkU1fH2tDxu8DWXxf1mjzWQAV4laJF51ZbC2ycYwNDvIm1rGez8Bug0vg==
-  dependencies:
-    moment "^2.10.2"
-
-"@types/eslint@8.44.2":
-  version "8.44.2"
-  resolved "https://repo.iotblue.io/repository/npm-group/@types/eslint/-/eslint-8.44.2.tgz#0d21c505f98a89b8dd4d37fa162b09da6089199a"
-  integrity sha512-sdPRb9K6iL5XZOmBubg8yiFp5yS/JdUDQsq5e6h95km91MCYMuvp7mh1fjPEYUhvHepKpZOjnEaMBR4PxjWDzg==
+"@types/eslint@8.4.10":
+  version "8.4.10"
+  resolved "https://repo.iotblue.io/repository/npm-group/@types/eslint/-/eslint-8.4.10.tgz#19731b9685c19ed1552da7052b6f668ed7eb64bb"
+  integrity sha512-Sl/HOqN8NKPmhWo2VBEPm0nvHnu2LL3v9vKo8MEq0EtbJ4eVzGPl41VNPvn5E1i5poMk4/XD8UriLHpJvEP/Nw==
   dependencies:
     "@types/estree" "*"
     "@types/json-schema" "*"
@@ -1167,11 +1175,6 @@
   version "15.7.5"
   resolved "https://repo.iotblue.io/repository/npm-group/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
-
-"@types/qs@^6.9.7":
-  version "6.9.7"
-  resolved "https://repo.iotblue.io/repository/npm-group/@types/qs/-/qs-6.9.7.tgz#63bb7d067db107cc1e457c303bc25d511febf6cb"
-  integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
 
 "@types/react-dom@^18.2.6":
   version "18.2.7"
@@ -1399,7 +1402,7 @@ adler-32@~1.3.0:
   resolved "https://repo.iotblue.io/repository/npm-group/adler-32/-/adler-32-1.3.1.tgz#1dbf0b36dda0012189a32b3679061932df1821e2"
   integrity sha512-ynZ4w/nUUv5rrsR8UUGoe1VC9hZj6V5hU9Qw1HlMDJGEJw5S7TfTErWTjMys6M7vr0YWcPqs3qAr4ss0nDfP+A==
 
-ajv@^6.12.4:
+ajv@^6.10.0, ajv@^6.12.4:
   version "6.12.6"
   resolved "https://repo.iotblue.io/repository/npm-group/ajv/-/ajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
   integrity sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==
@@ -1501,14 +1504,14 @@ axios@1.2.0:
     form-data "^4.0.0"
     proxy-from-env "^1.1.0"
 
-axios@^0.21.1, axios@^0.21.4:
+axios@^0.21.4:
   version "0.21.4"
   resolved "https://repo.iotblue.io/repository/npm-group/axios/-/axios-0.21.4.tgz#c67b90dc0568e5c1cf2b0b858c43ba28e2eda575"
   integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
   dependencies:
     follow-redirects "^1.14.0"
 
-axios@^1.3.3:
+axios@^1.3.3, axios@^1.4.0:
   version "1.4.0"
   resolved "https://repo.iotblue.io/repository/npm-group/axios/-/axios-1.4.0.tgz#38a7bf1224cd308de271146038b551d725f0be1f"
   integrity sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==
@@ -2136,32 +2139,32 @@ es6-symbol@^3.1.1, es6-symbol@^3.1.3, es6-symbol@~3.1.1:
     ext "^1.1.2"
 
 esbuild@^0.18.10:
-  version "0.18.19"
-  resolved "https://repo.iotblue.io/repository/npm-group/esbuild/-/esbuild-0.18.19.tgz#c763ccfd50b7b1322d13232cd91f2bd36ffde56b"
-  integrity sha512-ra3CaIKCzJp5bU5BDfrCc0FRqKj71fQi+gbld0aj6lN0ifuX2fWJYPgLVLGwPfA+ruKna+OWwOvf/yHj6n+i0g==
+  version "0.18.18"
+  resolved "https://repo.iotblue.io/repository/npm-group/esbuild/-/esbuild-0.18.18.tgz#196838a905c7068d1c1653b04f2c5dfdb68ef927"
+  integrity sha512-UckDPWvdVJLNT0npk5AMTpVwGRQhS76rWFLmHwEtgNvWlR9sgVV1eyc/oeBtM86q9s8ABBLMmm0CwNxhVemOiw==
   optionalDependencies:
-    "@esbuild/android-arm" "0.18.19"
-    "@esbuild/android-arm64" "0.18.19"
-    "@esbuild/android-x64" "0.18.19"
-    "@esbuild/darwin-arm64" "0.18.19"
-    "@esbuild/darwin-x64" "0.18.19"
-    "@esbuild/freebsd-arm64" "0.18.19"
-    "@esbuild/freebsd-x64" "0.18.19"
-    "@esbuild/linux-arm" "0.18.19"
-    "@esbuild/linux-arm64" "0.18.19"
-    "@esbuild/linux-ia32" "0.18.19"
-    "@esbuild/linux-loong64" "0.18.19"
-    "@esbuild/linux-mips64el" "0.18.19"
-    "@esbuild/linux-ppc64" "0.18.19"
-    "@esbuild/linux-riscv64" "0.18.19"
-    "@esbuild/linux-s390x" "0.18.19"
-    "@esbuild/linux-x64" "0.18.19"
-    "@esbuild/netbsd-x64" "0.18.19"
-    "@esbuild/openbsd-x64" "0.18.19"
-    "@esbuild/sunos-x64" "0.18.19"
-    "@esbuild/win32-arm64" "0.18.19"
-    "@esbuild/win32-ia32" "0.18.19"
-    "@esbuild/win32-x64" "0.18.19"
+    "@esbuild/android-arm" "0.18.18"
+    "@esbuild/android-arm64" "0.18.18"
+    "@esbuild/android-x64" "0.18.18"
+    "@esbuild/darwin-arm64" "0.18.18"
+    "@esbuild/darwin-x64" "0.18.18"
+    "@esbuild/freebsd-arm64" "0.18.18"
+    "@esbuild/freebsd-x64" "0.18.18"
+    "@esbuild/linux-arm" "0.18.18"
+    "@esbuild/linux-arm64" "0.18.18"
+    "@esbuild/linux-ia32" "0.18.18"
+    "@esbuild/linux-loong64" "0.18.18"
+    "@esbuild/linux-mips64el" "0.18.18"
+    "@esbuild/linux-ppc64" "0.18.18"
+    "@esbuild/linux-riscv64" "0.18.18"
+    "@esbuild/linux-s390x" "0.18.18"
+    "@esbuild/linux-x64" "0.18.18"
+    "@esbuild/netbsd-x64" "0.18.18"
+    "@esbuild/openbsd-x64" "0.18.18"
+    "@esbuild/sunos-x64" "0.18.18"
+    "@esbuild/win32-arm64" "0.18.18"
+    "@esbuild/win32-ia32" "0.18.18"
+    "@esbuild/win32-x64" "0.18.18"
 
 escalade@^3.1.1:
   version "3.1.1"
@@ -2219,7 +2222,7 @@ eslint-scope@^5.1.1:
     esrecurse "^4.3.0"
     estraverse "^4.1.1"
 
-eslint-scope@^7.2.2:
+eslint-scope@^7.1.1, eslint-scope@^7.2.2:
   version "7.2.2"
   resolved "https://repo.iotblue.io/repository/npm-group/eslint-scope/-/eslint-scope-7.2.2.tgz#deb4f92563390f32006894af62a22dba1c46423f"
   integrity sha512-dOt21O7lTMhDM+X9mB4GX+DZrZtCUJPL/wlcTqxyrx5IvO0IYtILdtrQGQp+8n5S0gwSVmOf9NQrjMOgfQZlIg==
@@ -2227,12 +2230,69 @@ eslint-scope@^7.2.2:
     esrecurse "^4.3.0"
     estraverse "^5.2.0"
 
+eslint-utils@^3.0.0:
+  version "3.0.0"
+  resolved "https://repo.iotblue.io/repository/npm-group/eslint-utils/-/eslint-utils-3.0.0.tgz#8aebaface7345bb33559db0a1f13a1d2d48c3672"
+  integrity sha512-uuQC43IGctw68pJA1RgbQS8/NP7rch6Cwd4j3ZBtgo4/8Flj4eGE7ZYSZRN3iq5pVUv6GPdW5Z1RFleo84uLDA==
+  dependencies:
+    eslint-visitor-keys "^2.0.0"
+
+eslint-visitor-keys@^2.0.0:
+  version "2.1.0"
+  resolved "https://repo.iotblue.io/repository/npm-group/eslint-visitor-keys/-/eslint-visitor-keys-2.1.0.tgz#f65328259305927392c938ed44eb0a5c9b2bd303"
+  integrity sha512-0rSmRBzXgDzIsD6mGdJgevzgezI534Cer5L/vyMX0kHzT/jiB43jRhd9YUlMGYLQy2zprNmoT8qasCGtY+QaKw==
+
 eslint-visitor-keys@^3.3.0, eslint-visitor-keys@^3.4.1, eslint-visitor-keys@^3.4.2:
   version "3.4.2"
   resolved "https://repo.iotblue.io/repository/npm-group/eslint-visitor-keys/-/eslint-visitor-keys-3.4.2.tgz#8c2095440eca8c933bedcadf16fefa44dbe9ba5f"
   integrity sha512-8drBzUEyZ2llkpCA67iYrgEssKDUu68V8ChqqOfFupIaG/LCVPUT+CoGJpT77zJprs4T/W7p07LP7zAIMuweVw==
 
-eslint@8.46.0, eslint@^8.44.0:
+eslint@8.29.0:
+  version "8.29.0"
+  resolved "https://repo.iotblue.io/repository/npm-group/eslint/-/eslint-8.29.0.tgz#d74a88a20fb44d59c51851625bc4ee8d0ec43f87"
+  integrity sha512-isQ4EEiyUjZFbEKvEGJKKGBwXtvXX+zJbkVKCgTuB9t/+jUBcy8avhkEwWJecI15BkRkOYmvIM5ynbhRjEkoeg==
+  dependencies:
+    "@eslint/eslintrc" "^1.3.3"
+    "@humanwhocodes/config-array" "^0.11.6"
+    "@humanwhocodes/module-importer" "^1.0.1"
+    "@nodelib/fs.walk" "^1.2.8"
+    ajv "^6.10.0"
+    chalk "^4.0.0"
+    cross-spawn "^7.0.2"
+    debug "^4.3.2"
+    doctrine "^3.0.0"
+    escape-string-regexp "^4.0.0"
+    eslint-scope "^7.1.1"
+    eslint-utils "^3.0.0"
+    eslint-visitor-keys "^3.3.0"
+    espree "^9.4.0"
+    esquery "^1.4.0"
+    esutils "^2.0.2"
+    fast-deep-equal "^3.1.3"
+    file-entry-cache "^6.0.1"
+    find-up "^5.0.0"
+    glob-parent "^6.0.2"
+    globals "^13.15.0"
+    grapheme-splitter "^1.0.4"
+    ignore "^5.2.0"
+    import-fresh "^3.0.0"
+    imurmurhash "^0.1.4"
+    is-glob "^4.0.0"
+    is-path-inside "^3.0.3"
+    js-sdsl "^4.1.4"
+    js-yaml "^4.1.0"
+    json-stable-stringify-without-jsonify "^1.0.1"
+    levn "^0.4.1"
+    lodash.merge "^4.6.2"
+    minimatch "^3.1.2"
+    natural-compare "^1.4.0"
+    optionator "^0.9.1"
+    regexpp "^3.2.0"
+    strip-ansi "^6.0.1"
+    strip-json-comments "^3.1.0"
+    text-table "^0.2.0"
+
+eslint@^8.44.0:
   version "8.46.0"
   resolved "https://repo.iotblue.io/repository/npm-group/eslint/-/eslint-8.46.0.tgz#a06a0ff6974e53e643acc42d1dcf2e7f797b3552"
   integrity sha512-cIO74PvbW0qU8e0mIvk5IV3ToWdCq5FYG6gWPHHkx6gNdjlbAYvtfHmlCMXxjcoVaIdwy/IAt3+mDkZkfvb2Dg==
@@ -2275,7 +2335,7 @@ eslint@8.46.0, eslint@^8.44.0:
     strip-ansi "^6.0.1"
     text-table "^0.2.0"
 
-espree@^9.6.0, espree@^9.6.1:
+espree@^9.4.0, espree@^9.6.0, espree@^9.6.1:
   version "9.6.1"
   resolved "https://repo.iotblue.io/repository/npm-group/espree/-/espree-9.6.1.tgz#a2a17b8e434690a5432f2f8018ce71d331a48c6f"
   integrity sha512-oruZaFkjorTpF32kDSI5/75ViwGeZginGGy2NoOSg3Q9bnwlnmDm4HLnkl0RE3n+njDXR037aY1+x58Z/zFdwQ==
@@ -2294,7 +2354,7 @@ esprima@~1.0.4:
   resolved "https://repo.iotblue.io/repository/npm-group/esprima/-/esprima-1.0.4.tgz#9f557e08fc3b4d26ece9dd34f8fbf476b62585ad"
   integrity sha512-rp5dMKN8zEs9dfi9g0X1ClLmV//WRyk/R15mppFNICIFRG5P92VP7Z04p8pk++gABo9W2tY+kHyu6P1mEHgmTA==
 
-esquery@^1.4.2:
+esquery@^1.4.0, esquery@^1.4.2:
   version "1.5.0"
   resolved "https://repo.iotblue.io/repository/npm-group/esquery/-/esquery-1.5.0.tgz#6ce17738de8577694edd7361c57182ac8cb0db0b"
   integrity sha512-YQLXUplAwJgCydQ78IMJywZCceoqk1oH01OERdSAJc/7U2AylwjhSCLDEtqwg811idIS/9fIU5GjG73IgjKMVg==
@@ -2531,7 +2591,7 @@ globals@^11.1.0:
   resolved "https://repo.iotblue.io/repository/npm-group/globals/-/globals-11.12.0.tgz#ab8795338868a0babd8525758018c2a7eb95c42e"
   integrity sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==
 
-globals@^13.19.0:
+globals@^13.15.0, globals@^13.19.0:
   version "13.20.0"
   resolved "https://repo.iotblue.io/repository/npm-group/globals/-/globals-13.20.0.tgz#ea276a1e508ffd4f1612888f9d1bad1e2717bf82"
   integrity sha512-Qg5QtVkCy/kv3FUSlu4ukeZDVf9ee0iXLAUYX13gbR17bnejFTzr4iS9bY7kwCf1NztRNm1t91fjOiyx4CSwPQ==
@@ -2554,6 +2614,11 @@ globrex@^0.1.2:
   version "0.1.2"
   resolved "https://repo.iotblue.io/repository/npm-group/globrex/-/globrex-0.1.2.tgz#dd5d9ec826232730cd6793a5e33a9302985e6098"
   integrity sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==
+
+grapheme-splitter@^1.0.4:
+  version "1.0.4"
+  resolved "https://repo.iotblue.io/repository/npm-group/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz#9cf3a665c6247479896834af35cf1dbb4400767e"
+  integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
 
 graphemer@^1.4.0:
   version "1.4.0"
@@ -2628,9 +2693,9 @@ i18next-xhr-backend@^3.2.2:
     "@babel/runtime" "^7.5.5"
 
 i18next@^23.2.11:
-  version "23.4.2"
-  resolved "https://repo.iotblue.io/repository/npm-group/i18next/-/i18next-23.4.2.tgz#e68108be82287114e027afc5402bb7830d7f45c9"
-  integrity sha512-hkVPHKFLtn9iewdqHDiU+MGVIBk+bVFn5usw7CIeCn/SBcVKGTItGdjNPm2B8Lnz42CeHUlnSOTgsr5vbITjhA==
+  version "23.4.1"
+  resolved "https://repo.iotblue.io/repository/npm-group/i18next/-/i18next-23.4.1.tgz#11fe0db92ac8a4125934960ebccf6a5f8ed6b9fc"
+  integrity sha512-07ekE7hbUrbxTYj97VnBzyhKcGURTJC9p4iWTwCVC8t63T+YrgqQmb/n1LBQMivZYwR61pqS+PC0G2rtENycyQ==
   dependencies:
     "@babel/runtime" "^7.22.5"
 
@@ -2651,7 +2716,7 @@ immediate@~3.0.5:
   resolved "https://repo.iotblue.io/repository/npm-group/immediate/-/immediate-3.0.6.tgz#9db1dbd0faf8de6fbe0f5dd5e56bb606280de69b"
   integrity sha512-XXOFtyqDjNDAQxVfYxuF7g9Il/IbWmmlQg2MYKOH8ExIT1qg6xc4zyS3HaEEATgs1btfzxq15ciUiY7gjSXRGQ==
 
-import-fresh@^3.2.1:
+import-fresh@^3.0.0, import-fresh@^3.2.1:
   version "3.3.0"
   resolved "https://repo.iotblue.io/repository/npm-group/import-fresh/-/import-fresh-3.3.0.tgz#37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b"
   integrity sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==
@@ -2760,6 +2825,11 @@ isexe@^2.0.0:
   version "2.0.0"
   resolved "https://repo.iotblue.io/repository/npm-group/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
   integrity sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==
+
+js-sdsl@^4.1.4:
+  version "4.4.2"
+  resolved "https://repo.iotblue.io/repository/npm-group/js-sdsl/-/js-sdsl-4.4.2.tgz#2e3c031b1f47d3aca8b775532e3ebb0818e7f847"
+  integrity sha512-dwXFwByc/ajSV6m5bcKAPwe4yDDF6D614pxmIi5odytzxRlwqF6nwoiCek80Ixc7Cvma5awClxrzFtxCQvcM8w==
 
 js-sha256@^0.9.0:
   version "0.9.0"
@@ -2895,16 +2965,15 @@ keycloak-js@^22.0.0:
     base64-js "^1.5.1"
     js-sha256 "^0.9.0"
 
-kuido-sdk@^0.0.7:
-  version "0.0.7"
-  resolved "https://repo.iotblue.io/repository/npm-group/kuido-sdk/-/kuido-sdk-0.0.7.tgz#bf7678df77be6c107ee2e6606d125d0b2fd1d405"
-  integrity sha512-2XSrutr8ScYkB71t1ptGjfB9ZvnGw/IfOdhYYORGhz/kS6HrdBSjSB1wEPIJPFABQuyrjj/pxKW08u1aUUj4Uw==
+kuido-sdk@^0.0.3:
+  version "0.0.3"
+  resolved "https://repo.iotblue.io/repository/npm-group/kuido-sdk/-/kuido-sdk-0.0.3.tgz#05030bcd704f97f89d391e9491fb8d50216af114"
+  integrity sha512-hdDKaBHHj60ajAwkfPgkzJSAEeAmqukgac960DBcoU8gO4SBxISwc4SHNlIVcQwqnWmVX/5zHyZTGKd5QxJ+rQ==
   dependencies:
     axios "^0.21.4"
     geojson "^0.5.0"
     qs "^6.9.1"
     socket.io-client "^4.2.0"
-    uuid "^9.0.0"
 
 levn@^0.4.1:
   version "0.4.1"
@@ -2968,50 +3037,15 @@ lodash.debounce@^4.0.8:
   resolved "https://repo.iotblue.io/repository/npm-group/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
   integrity sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==
 
-lodash.difference@^4.5.0:
-  version "4.5.0"
-  resolved "https://repo.iotblue.io/repository/npm-group/lodash.difference/-/lodash.difference-4.5.0.tgz#9ccb4e505d486b91651345772885a2df27fd017c"
-  integrity sha512-dS2j+W26TQ7taQBGN8Lbbq04ssV3emRw4NY58WErlTO29pIqS0HmoT5aJ9+TUQ1N3G+JOZSji4eugsWwGp9yPA==
-
-lodash.differenceby@^4.8.0:
-  version "4.8.0"
-  resolved "https://repo.iotblue.io/repository/npm-group/lodash.differenceby/-/lodash.differenceby-4.8.0.tgz#cfd59e94353af5de51da5d302ca4ebff33faac57"
-  integrity sha512-rJKrEP7/9SLBRcCaxYbE8iODlOgR3O3ckL/ZbONxC99n4QfpoovHw/+FZwDl16h3UKLrruLHJUuv440rOPksrg==
-
 lodash.get@^4.4.2:
   version "4.4.2"
   resolved "https://repo.iotblue.io/repository/npm-group/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
   integrity sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==
 
-lodash.intersection@^4.4.0:
-  version "4.4.0"
-  resolved "https://repo.iotblue.io/repository/npm-group/lodash.intersection/-/lodash.intersection-4.4.0.tgz#0a11ba631d0e95c23c7f2f4cbb9a692ed178e705"
-  integrity sha512-N+L0cCfnqMv6mxXtSPeKt+IavbOBBSiAEkKyLasZ8BVcP9YXQgxLO12oPR8OyURwKV8l5vJKiE1M8aS70heuMg==
-
-lodash.isempty@^4.4.0:
-  version "4.4.0"
-  resolved "https://repo.iotblue.io/repository/npm-group/lodash.isempty/-/lodash.isempty-4.4.0.tgz#6f86cbedd8be4ec987be9aaf33c9684db1b31e7e"
-  integrity sha512-oKMuF3xEeqDltrGMfDxAPGIVMSSRv8tbRSODbrs4KGsRRLEhrW8N8Rd4DRgB2+621hY8A8XwwrTVhXWpxFvMzg==
-
-lodash.isequal@^4.5.0:
-  version "4.5.0"
-  resolved "https://repo.iotblue.io/repository/npm-group/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
-  integrity sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==
-
-lodash.isequalwith@^4.4.0:
-  version "4.4.0"
-  resolved "https://repo.iotblue.io/repository/npm-group/lodash.isequalwith/-/lodash.isequalwith-4.4.0.tgz#266726ddd528f854f21f4ea98a065606e0fbc6b0"
-  integrity sha512-dcZON0IalGBpRmJBmMkaoV7d3I80R2O+FrzsZyHdNSFrANq/cgDqKQNmAHE8UEj4+QYWwwhkQOVdLHiAopzlsQ==
-
 lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://repo.iotblue.io/repository/npm-group/lodash.merge/-/lodash.merge-4.6.2.tgz#558aa53b43b661e1925a0afdfa36a9a1085fe57a"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
-
-lodash.xorwith@^4.5.0:
-  version "4.5.0"
-  resolved "https://repo.iotblue.io/repository/npm-group/lodash.xorwith/-/lodash.xorwith-4.5.0.tgz#8dd1502335d96adc9e46d9a56ec3be4ef26fc2a7"
-  integrity sha512-QvNapombeCFdZY2m/gXUU8Kux7+k1z4CfXsV+WMguseBjLtuZe2MsJu5tvC9M06GGfp+16tyCWKJGB0ES0cvJg==
 
 loose-envify@^1.1.0, loose-envify@^1.4.0:
   version "1.4.0"
@@ -3117,11 +3151,6 @@ mlly@^1.2.0, mlly@^1.4.0:
     pkg-types "^1.0.3"
     ufo "^1.1.2"
 
-moment@^2.10.2:
-  version "2.29.4"
-  resolved "https://repo.iotblue.io/repository/npm-group/moment/-/moment-2.29.4.tgz#3dbe052889fe7c1b2ed966fcb3a77328964ef108"
-  integrity sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==
-
 ms@2.1.2:
   version "2.1.2"
   resolved "https://repo.iotblue.io/repository/npm-group/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
@@ -3204,7 +3233,7 @@ optionator@^0.8.1:
     type-check "~0.3.2"
     word-wrap "~1.2.3"
 
-optionator@^0.9.3:
+optionator@^0.9.1, optionator@^0.9.3:
   version "0.9.3"
   resolved "https://repo.iotblue.io/repository/npm-group/optionator/-/optionator-0.9.3.tgz#007397d44ed1872fdc6ed31360190f81814e2c64"
   integrity sha512-JjCoypp+jKn1ttEFExxhetCKeJt9zhAgAve5FXHixTvFDW/5aEktX9bufBKLRRMdU7bNtpLfcGu94B3cdEJgjg==
@@ -3340,7 +3369,7 @@ polylabel@^1.0.2:
   dependencies:
     tinyqueue "^2.0.3"
 
-postcss@^8.4.27:
+postcss@^8.4.26:
   version "8.4.27"
   resolved "https://repo.iotblue.io/repository/npm-group/postcss/-/postcss-8.4.27.tgz#234d7e4b72e34ba5a92c29636734349e0d9c3057"
   integrity sha512-gY/ACJtJPSmUFPDCHtX78+01fHa64FaU4zaaWfuh1MhGJISufJAH4cun6k/8fwsHYeK4UQmENQK+tRLCFJE8JQ==
@@ -3563,6 +3592,11 @@ regexp.prototype.flags@^1.2.0:
     define-properties "^1.2.0"
     functions-have-names "^1.2.3"
 
+regexpp@^3.2.0:
+  version "3.2.0"
+  resolved "https://repo.iotblue.io/repository/npm-group/regexpp/-/regexpp-3.2.0.tgz#0425a2768d8f23bad70ca4b90461fa2f1213e1b2"
+  integrity sha512-pq2bWo9mVD43nbts2wGv17XLiNLya+GklZ8kaDLV2Z08gDCsGpnKn9BFMepvWuHCbyVvY7J5o5+BVvoQbmlJLg==
+
 regression@^2.0.1:
   version "2.0.1"
   resolved "https://repo.iotblue.io/repository/npm-group/regression/-/regression-2.0.1.tgz#8d29c3e8224a10850c35e337e85a8b2fac3b0c87"
@@ -3614,7 +3648,7 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-rollup@^3.27.1:
+rollup@^3.25.2:
   version "3.27.2"
   resolved "https://repo.iotblue.io/repository/npm-group/rollup/-/rollup-3.27.2.tgz#59adc973504408289be89e5978e938ce852c9520"
   integrity sha512-YGwmHf7h2oUHkVBT248x0yt6vZkYQ3/rvE5iQuVBh3WO8GcJ6BNeOkpoX1yMHIiBm18EMLjBPIoUDkhgnyxGOQ==
@@ -3836,7 +3870,7 @@ strip-ansi@^6.0.1:
   dependencies:
     ansi-regex "^5.0.1"
 
-strip-json-comments@^3.1.1:
+strip-json-comments@^3.1.0, strip-json-comments@^3.1.1:
   version "3.1.1"
   resolved "https://repo.iotblue.io/repository/npm-group/strip-json-comments/-/strip-json-comments-3.1.1.tgz#31f1281b3832630434831c310c01cccda8cbe006"
   integrity sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==
@@ -4008,7 +4042,12 @@ typedarray@^0.0.6:
   resolved "https://repo.iotblue.io/repository/npm-group/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
-typescript@5.1.6, typescript@^5.0.2:
+typescript@4.9.3:
+  version "4.9.3"
+  resolved "https://repo.iotblue.io/repository/npm-group/typescript/-/typescript-4.9.3.tgz#3aea307c1746b8c384435d8ac36b8a2e580d85db"
+  integrity sha512-CIfGzTelbKNEnLpLdGFgdyKhG23CKdKgQPOBc+OUNrkJ2vr+KSzsSV5kq5iWhEQbok+quxgGzrAtGWCyU7tHnA==
+
+typescript@^5.0.2:
   version "5.1.6"
   resolved "https://repo.iotblue.io/repository/npm-group/typescript/-/typescript-5.1.6.tgz#02f8ac202b6dad2c0dd5e0913745b47a37998274"
   integrity sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==
@@ -4018,12 +4057,12 @@ ufo@^1.1.2:
   resolved "https://repo.iotblue.io/repository/npm-group/ufo/-/ufo-1.2.0.tgz#28d127a087a46729133fdc89cb1358508b3f80ba"
   integrity sha512-RsPyTbqORDNDxqAdQPQBpgqhWle1VcTSou/FraClYlHf6TZnQcGslpLcAphNR+sQW4q5lLWLbOsRlh9j24baQg==
 
-ui-widgets@^0.0.69:
-  version "0.0.69"
-  resolved "https://repo.iotblue.io/repository/npm-group/ui-widgets/-/ui-widgets-0.0.69.tgz#4dfe264493fde7f1c30cb79e478f50d9b7d917c8"
-  integrity sha512-OFHWSuakbcc/1Z6VOjdF/smgNtc9KTYKootsy4Nzm8Xn552JDlKs8aRLDUgxEL3UYSM3iPENEh10gwln42sYjA==
+ui-widgets@^0.0.66:
+  version "0.0.67"
+  resolved "https://repo.iotblue.io/repository/npm-group/ui-widgets/-/ui-widgets-0.0.67.tgz#4a2d75996ced778f079fb1934d13d019ecc346b4"
+  integrity sha512-aEWzyjjg8NN1s9t+Bg70n8RVFXhZBiPpcSKxkaviB0OSu/Z3UzGbKy/mElfUE/Dkzc9hpdKKzR3oMktAuBDh+g==
   dependencies:
-    "@amcharts/amcharts4" "^4.10.36"
+    "@amcharts/amcharts4" "^4.10.22"
     "@cervello/use-data" "^2.9.3"
     "@emotion/react" "^11.11.1"
     "@emotion/styled" "^11.11.0"
@@ -4035,7 +4074,6 @@ ui-widgets@^0.0.69:
     "@mui/x-data-grid" "^6.10.2"
     "@mui/x-date-pickers" "^6.10.2"
     "@mui/x-date-pickers-pro" "^6.10.2"
-    "@types/chart.js" "^2.9.37"
     "@types/json2csv" "^5.0.3"
     "@types/lodash.debounce" "^4.0.7"
     "@types/throttle-debounce" "^5.0.0"
@@ -4115,11 +4153,6 @@ util-deprecate@~1.0.1:
   resolved "https://repo.iotblue.io/repository/npm-group/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==
 
-uuid@^9.0.0:
-  version "9.0.0"
-  resolved "https://repo.iotblue.io/repository/npm-group/uuid/-/uuid-9.0.0.tgz#592f550650024a38ceb0c562f2f6aa435761efb5"
-  integrity sha512-MXcSTerfPa4uqyzStbRoTgt5XIe3x5+42+q1sDuy3R5MDk66URdLMOZe5aPX/SQd+kuYAh0FdP/pO28IkQyTeg==
-
 validator@^13.7.0:
   version "13.11.0"
   resolved "https://repo.iotblue.io/repository/npm-group/validator/-/validator-13.11.0.tgz#23ab3fd59290c61248364eabf4067f04955fbb1b"
@@ -4138,15 +4171,15 @@ vite-node@0.33.0:
     vite "^3.0.0 || ^4.0.0"
 
 vite-plugin-linter@^2.0.2:
-  version "2.0.3"
-  resolved "https://repo.iotblue.io/repository/npm-group/vite-plugin-linter/-/vite-plugin-linter-2.0.3.tgz#3579f5f33760940c8043871c7957a560c05fb4da"
-  integrity sha512-zsyvJKlT61vE08tliB5OzLDoAFx3cpxqlpKB8Gi96/SFA1jaXI/2uzV8ej9jLSCra+TqNcVo5kOPjBq7exuWFA==
+  version "2.0.2"
+  resolved "https://repo.iotblue.io/repository/npm-group/vite-plugin-linter/-/vite-plugin-linter-2.0.2.tgz#120758de56eb5ad226adad3799229a7fcad2de08"
+  integrity sha512-ssIrqn9k+eVFw5D6jPyNA7qWmzQBilTZQyv0SxPGl1TZacae/mzue9253kT1VklcrVtPMua1KOSmrop95Vp/gg==
   dependencies:
     "@rollup/pluginutils" "5.0.2"
-    "@types/eslint" "8.44.2"
+    "@types/eslint" "8.4.10"
     chokidar "3.5.3"
-    eslint "8.46.0"
-    typescript "5.1.6"
+    eslint "8.29.0"
+    typescript "4.9.3"
 
 vite-tsconfig-paths@^4.2.0:
   version "4.2.0"
@@ -4158,13 +4191,13 @@ vite-tsconfig-paths@^4.2.0:
     tsconfck "^2.1.0"
 
 "vite@^3.0.0 || ^4.0.0", vite@^4.4.0:
-  version "4.4.9"
-  resolved "https://repo.iotblue.io/repository/npm-group/vite/-/vite-4.4.9.tgz#1402423f1a2f8d66fd8d15e351127c7236d29d3d"
-  integrity sha512-2mbUn2LlUmNASWwSCNSJ/EG2HuSRTnVNaydp6vMCm5VIqJsjMfbIWtbH2kDuwUVW5mMUKKZvGPX/rqeqVvv1XA==
+  version "4.4.8"
+  resolved "https://repo.iotblue.io/repository/npm-group/vite/-/vite-4.4.8.tgz#31e4a438f8748695c68bd57ffd262ba93540fdf7"
+  integrity sha512-LONawOUUjxQridNWGQlNizfKH89qPigK36XhMI7COMGztz8KNY0JHim7/xDd71CZwGT4HtSRgI7Hy+RlhG0Gvg==
   dependencies:
     esbuild "^0.18.10"
-    postcss "^8.4.27"
-    rollup "^3.27.1"
+    postcss "^8.4.26"
+    rollup "^3.25.2"
   optionalDependencies:
     fsevents "~2.3.2"
 
