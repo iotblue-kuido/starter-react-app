@@ -35,7 +35,11 @@
     "react-hook-form": "^7.45.1",
     "react-i18next": "^13.0.2",
     "react-router-dom": "^6.14.1",
+<<<<<<< HEAD
     "ui-widgets": "^0.0.69"
+=======
+    "ui-widgets": "^0.0.67"
+>>>>>>> 3d578c0b580791d6cced45ba6031f788befba517
   },
   "devDependencies": {
     "@types/qs": "^6.9.7",
