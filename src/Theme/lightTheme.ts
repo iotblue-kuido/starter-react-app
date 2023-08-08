@@ -4,7 +4,7 @@ import { bgBG as coreBgBG } from '@mui/material/locale';
 import { blueGrey as primary, orange as secondary } from '@mui/material/colors';
 
 export const lightTheme = createTheme({
-	spacing:0,
+    spacing: 0,
     palette: {
         primary: {
             main: '#1034a6',
@@ -13,13 +13,13 @@ export const lightTheme = createTheme({
         secondary: {
             main: '#eaeaea',
         },
-        background:{
-            default:'#f3f5fb',
+        background: {
+            default: '#f3f5fb',
             paper: '#fff'
         }
     },
     typography: {
-        // "fontFamily": "Roboto",
+        "fontFamily": "Cairo",
         "fontSize": 14,
         "fontWeightLight": 300,
         "fontWeightRegular": 400,

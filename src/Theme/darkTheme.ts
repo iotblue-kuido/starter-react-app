@@ -17,8 +17,8 @@ export const darkTheme = createTheme(
 			// 	main: '#c6ff00',
 			// 	light: '#d1ff33',
 			// 	dark: '#8ab200',
-      // contrastText: '#000',
-				
+			// contrastText: '#000',
+
 			// },
 			error: {
 				main: 'rgba(232, 56, 26, 1)',
@@ -50,11 +50,11 @@ export const darkTheme = createTheme(
 		},
 
 		typography: {
+			"fontFamily": "Cairo",
 			htmlFontSize: 12,
 			fontSize: 12,
-			fontFamily: 'poppins',
 			allVariants: {
-				fontFamily: 'poppins',
+				fontFamily: 'Cairo',
 			},
 			h1: {
 				fontSize: '24px',
@@ -149,17 +149,17 @@ export const darkTheme = createTheme(
 				styleOverrides: {
 					body: {
 						'&::-webkit-scrollbar-track, & *::-webkit-scrollbar-track':
-							{
-								boxShadow: 'inset 0 0 6px rgba(0,0,0,0.00)',
-								webkitBoxShadow:
-									'inset 0 0 6px rgba(0,0,0,0.00)',
-							},
+						{
+							boxShadow: 'inset 0 0 6px rgba(0,0,0,0.00)',
+							webkitBoxShadow:
+								'inset 0 0 6px rgba(0,0,0,0.00)',
+						},
 						'&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb':
-							{
-								outline: '1px solid #bbbaba',
-								backgroundColor: 'rgb(12 6 6 / 25%)',
-								borderRadius: '5px',
-							},
+						{
+							outline: '1px solid #bbbaba',
+							backgroundColor: 'rgb(12 6 6 / 25%)',
+							borderRadius: '5px',
+						},
 						'&::-webkit-scrollbar, & *::-webkit-scrollbar': {
 							width: '0.4em',
 						},
