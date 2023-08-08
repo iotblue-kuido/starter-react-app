@@ -7,11 +7,7 @@
   resolved "https://repo.iotblue.io/repository/npm-group/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz#bd9154aec9983f77b3a034ecaa015c2e4201f6cf"
   integrity sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==
 
-<<<<<<< HEAD
 "@amcharts/amcharts4@^4.10.36":
-=======
-"@amcharts/amcharts4@^4.10.22":
->>>>>>> 3d578c0b580791d6cced45ba6031f788befba517
   version "4.10.37"
   resolved "https://repo.iotblue.io/repository/npm-group/@amcharts/amcharts4/-/amcharts4-4.10.37.tgz#ee9cd3128b6068a6d757d78f3e6a7fbcb24369a0"
   integrity sha512-MA0yf2USqoN6W8se2IVKkn8j+hPCkisGtDZAID1JrlzJFPqrswNpGh2h+LO/ofX2kFROcoHZQ8/q2R6BHCa5qQ==
